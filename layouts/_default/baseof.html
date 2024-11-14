@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="{{ site.LanguageCode | default `en-US` }}" itemscope itemtype="http://schema.org/WebPage">
+<head>
+    {{ partial "head.html" . }}
+
+    {{ if templates.Exists ("partials/head/custom.html") }}
+        {{ partial "partials/head/custom.html" . }}
+    {{ end }}
+</head>
+<body>
+{{ partial "components/header.html" . }}
+
+{{ block "main" . }}{{ end }}
+
+{{ if hugo.IsProduction }}
+    {{ partial "gtm-noscript.html" }}
+{{ end }}
+
+{{ if templates.Exists ("partials/script/custom-body.html") }}
+    {{ partial "partials/script/custom-body.html" . }}
+{{ end }}
+</body>
+</html>

@@ -1,0 +1,16 @@
+{{ $options := dict
+        "targetPath" "css/style.css"
+        "transpiler" "dartsass"
+        "vars" site.Params.style
+}}
+
+{{ with resources.Get "scss/style.scss" | toCSS $options }}
+  <link rel="stylesheet" type="text/css" href="{{ .RelPermalink }}">
+{{ end }}
+
+{{ if isset site.Params "customcss" }}
+    {{ range site.Params.customcss }}
+        {{ $customstyle := resources.Get . | fingerprint }}
+      <link rel="stylesheet" type="text/css" href="{{ $customstyle.RelPermalink }}">
+    {{ end }}
+{{ end }}
