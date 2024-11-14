@@ -26,7 +26,7 @@ $spacers: map-merge(
   )
 );
 
-$font-family-sans-serif: h.$font_family;
+$font-family-sans-serif: if(h.$font_family != null, h.$font_family, "Inter, sans-serif");
 
 // Dropdown
 $dropdown-border-radius: 0;

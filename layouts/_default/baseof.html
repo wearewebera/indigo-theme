@@ -12,9 +12,13 @@
 
 {{ block "main" . }}{{ end }}
 
+{{ partial "components/footer.html" . }}
+
 {{ if hugo.IsProduction }}
     {{ partial "gtm-noscript.html" }}
 {{ end }}
+
+{{ partial "cookie-consent.html" . }}
 
 {{ if templates.Exists ("partials/script/custom-body.html") }}
     {{ partial "partials/script/custom-body.html" . }}

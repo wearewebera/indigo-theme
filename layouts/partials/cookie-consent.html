@@ -1,6 +1,6 @@
 {{ with site.Params.cookies }}
     {{ if .enable }}
-      <div id="cookie-consent" class="d-none text-bg-dark p-4">
+      <div id="cookie-consent" class="d-none text-dark p-4 border bg-light rounded">
         <div class="mb-4">{{ .content | markdownify }}</div>
         <button id="cookie-consent-btn" class="btn btn-sm btn-secondary">
             {{ .button }}
@@ -8,18 +8,20 @@
       </div>
 
       <script type="application/javascript">
-        const cookieBox = document.getElementById("cookie-consent");
-        const cookieButton = document.getElementById("cookie-consent-btn");
-        if (!Cookies.get("cookie-consent")) {
-          cookieBox.classList.remove("d-none");
-          cookieButton.onclick = function() {
-            Cookies.set("cookie-consent", true, {
-              expires: {{ .expire_days }}
-            })
-            ;
-            cookieBox.classList.add("d-none");
-          };
-        }
+        window.addEventListener("load", () => {
+          const cookieBox = document.getElementById("cookie-consent");
+          const cookieButton = document.getElementById("cookie-consent-btn");
+          if (!Cookies.get("cookie-consent")) {
+            cookieBox.classList.remove("d-none");
+            cookieButton.onclick = function() {
+              Cookies.set("cookie-consent", true, {
+                expires: {{ .expire_days }}
+              })
+              ;
+              cookieBox.classList.add("d-none");
+            };
+          }
+        });
       </script>
     {{ end }}
 {{ end }}
