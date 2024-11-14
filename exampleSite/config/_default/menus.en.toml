@@ -1,0 +1,130 @@
+[[main]]
+name = "Services"
+hasChildren = true
+weight = 1
+
+[[main]]
+parent = "Services"
+name = "Training"
+url = "services/training"
+weight = 1
+
+[[main]]
+parent = "Services"
+name = "Workflow"
+url = "services/workflow"
+weight = 2
+
+[[main]]
+name = "Resources"
+hasChildren = true
+weight = 2
+
+[[main]]
+parent = "Resources"
+name = "Scrum"
+url = "resources/scrum"
+weight = 1
+
+[[main]]
+parent = "Resources"
+name = "Notion Templates"
+url = "resources/notion-templates"
+weight = 2
+
+[[main]]
+name = "Blog"
+url = "blog"
+weight = 3
+
+[[main]]
+name = "About"
+url = "about-us"
+weight = 4
+
+[[main]]
+name = "Contact"
+url = "contact-us"
+weight = 5
+
+[[footer]]
+name = "Quick Links"
+hasChildren = true
+weight = 1
+[[footer.params]]
+columns = 2
+
+[[footer]]
+parent = "Quick Links"
+name = "Scrum"
+url = "resources/scrum"
+weight = 1
+
+[[footer]]
+parent = "Quick Links"
+name = "Notion Templates"
+url = "resources/notion-templates"
+weight = 2
+
+[[footer]]
+parent = "Quick Links"
+name = "Blog"
+url = "blog"
+weight = 3
+
+[[footer]]
+parent = "Quick Links"
+name = "About"
+url = "about-us"
+weight = 4
+
+[[footer]]
+parent = "Quick Links"
+name = "Contact"
+url = "contact-us"
+weight = 5
+
+[[footer]]
+parent = "Quick Links"
+name = "Privacy Policy"
+url = "privacy-policy"
+weight = 6
+
+[[footer]]
+name = "Products"
+hasChildren = true
+weight = 2
+
+[[footer]]
+parent = "Products"
+name = "Training"
+url = "services/training"
+weight = 1
+
+[[footer]]
+parent = "Products"
+name = "Workflow"
+url = "services/workflow"
+weight = 2
+
+[[footer]]
+parent = "Products"
+name = "Design"
+url = "services/design"
+weight = 3
+
+[[footer]]
+parent = "Products"
+name = "Development"
+url = "services/development"
+weight = 4
+
+[[footer_links]]
+name = "Terms of Service"
+url = "terms-of-service"
+weight = 1
+
+[[footer_links]]
+name = "Privacy Policy"
+url = "privacy-policy"
+weight = 2

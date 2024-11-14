@@ -1,0 +1,56 @@
+logo = "img/logo.png"
+logo_width = "512px"
+logo_webp = true
+logo_text = "My Website"
+favicon = "img/favicon.png"
+
+customcss = ["css/custom.css"] # Optional
+customjs = ["js/custom.js"] # Optional
+
+[style]
+primary_color = '#21519f'
+secondary_color = '#f9bc56'
+font_family = 'Inter' # Optional
+
+[metadata]
+author = "Webera"
+image = "img/og-image.png"
+
+[cookies]
+enable = true
+expire_days = 30
+
+[google_tag_manager]
+enable = true
+id = "GTM-5ZSTTTZM"
+
+[crisp_chat]
+enable = true
+id = "0790d7b5-508a-4c48-9a15-3a4a2c0e24c4"
+
+[company]
+name = "Avanti Studio"
+email = "email@email.com"
+phone = "+1234567890"
+address_line_1 = "1234 Street Name"
+address_line_2 = "City, State, Country"
+
+[[social]]
+title = "linkedin"
+icon = "fa-brands fa-linkedin-in"
+link = "https://www.linkedin.com/company/avantistudio"
+
+[[social]]
+title = "instagram"
+icon = "fa-brands fa-instagram"
+link = "https://www.instagram.com/avantistudiohq/"
+
+[[social]]
+title = "twitter"
+icon = "fa-brands fa-x-twitter"
+link = "https://twitter.com/avantistudiohq/"
+
+[[social]]
+title = "facebook"
+icon = "fa-brands fa-facebook-f"
+link = "https://www.facebook.com/avantistudiohq/"

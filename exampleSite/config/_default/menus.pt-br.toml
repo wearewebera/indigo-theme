@@ -1,0 +1,131 @@
+[[main]]
+name = "Serviços"
+hasChildren = true
+weight = 1
+
+[[main]]
+parent = "Serviços"
+name = "Treinamento"
+url = "services/training"
+weight = 1
+
+[[main]]
+parent = "Serviços"
+name = "Fluxo de Trabalho"
+url = "services/workflow"
+weight = 2
+
+[[main]]
+name = "Recursos"
+hasChildren = true
+weight = 2
+
+[[main]]
+parent = "Recursos"
+name = "Scrum"
+url = "resources/scrum"
+weight = 1
+
+[[main]]
+parent = "Recursos"
+name = "Modelos do Notion"
+url = "resources/notion-templates"
+weight = 2
+
+[[main]]
+name = "Blog"
+url = "blog"
+weight = 3
+
+[[main]]
+name = "Sobre"
+url = "about-us"
+weight = 4
+
+[[main]]
+name = "Contato"
+url = "contact-us"
+weight = 5
+
+
+[[footer]]
+name = "Links Rápidos"
+hasChildren = true
+weight = 1
+[[footer.params]]
+columns = 2
+
+[[footer]]
+parent = "Links Rápidos"
+name = "Scrum"
+url = "resources/scrum"
+weight = 1
+
+[[footer]]
+parent = "Links Rápidos"
+name = "Notion Templates"
+url = "resources/notion-templates"
+weight = 2
+
+[[footer]]
+parent = "Links Rápidos"
+name = "Blog"
+url = "blog"
+weight = 3
+
+[[footer]]
+parent = "Links Rápidos"
+name = "Sobre"
+url = "about-us"
+weight = 4
+
+[[footer]]
+parent = "Links Rápidos"
+name = "Contato"
+url = "contact-us"
+weight = 5
+
+[[footer]]
+parent = "Links Rápidos"
+name = "Termos de Serviço"
+url = "privacy-policy"
+weight = 6
+
+[[footer]]
+name = "Produtos"
+hasChildren = true
+weight = 2
+
+[[footer]]
+parent = "Produtos"
+name = "Treinamento"
+url = "services/training"
+weight = 1
+
+[[footer]]
+parent = "Produtos"
+name = "Workflow"
+url = "services/workflow"
+weight = 2
+
+[[footer]]
+parent = "Produtos"
+name = "Design"
+url = "services/design"
+weight = 3
+
+[[footer]]
+parent = "Produtos"
+name = "Desenvolvimento"
+url = "services/development"
+weight = 4
+
+[[footer_links]]
+name = "Termos de Serviço"
+url = "terms-of-service"
+weight = 1
+
+[[footer_links]]
+name = "Política de Privacidade"
+url = "privacy-policy"
+weight = 2
