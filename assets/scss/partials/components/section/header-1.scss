@@ -1,0 +1,7 @@
+.section-header-1 {
+  p {
+    @include media-breakpoint-up(lg) {
+      max-width: 50%;
+    }
+  }
+}

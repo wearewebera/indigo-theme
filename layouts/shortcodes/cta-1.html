@@ -1,0 +1,3 @@
+{{ $button := dict "Button" . "Link" (index $.Page.Params (.Get "context") "Button" "Link") "Label" (index $.Page.Params (.Get "context") "Button" "Label") "Color" (.Get "btn-color") }}
+{{ $params := dict "Context" . "Id" (.Get "id") "Classes" (.Get "class") "Title" (index $.Page.Params (.Get "context") "Title") "Content" (index $.Page.Params (.Get "context") "Content") "Image" ((index $.Page.Params (.Get "context") "Image")) "BgColor" (.Get "bg-color") "Dark" (.Get "dark") "Reverse" (.Get "reverse") "Button" $button }}
+{{ partial "partials/components/cta/cta-1.html" $params }}
