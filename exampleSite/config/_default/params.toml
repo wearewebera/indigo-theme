@@ -28,13 +28,6 @@ id = "GTM-5ZSTTTZM"
 enable = true
 id = "0790d7b5-508a-4c48-9a15-3a4a2c0e24c4"
 
-[company]
-name = "Avanti Studio"
-email = "email@email.com"
-phone = "+1234567890"
-address_line_1 = "1234 Street Name"
-address_line_2 = "City, State, Country"
-
 [[social]]
 title = "linkedin"
 icon = "fa-brands fa-linkedin-in"

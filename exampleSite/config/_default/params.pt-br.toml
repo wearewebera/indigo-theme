@@ -8,3 +8,8 @@ button = "Eu aceito"
 
 [footer]
 copyright = "© Todos os direitos reservados."
+
+[notFound]
+title = "404"
+content = "A página que você está procurando não existe."
+button = "Voltar para a página inicial"

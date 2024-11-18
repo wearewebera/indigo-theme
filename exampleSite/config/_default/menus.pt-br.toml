@@ -28,8 +28,8 @@ weight = 1
 
 [[main]]
 parent = "Recursos"
-name = "Modelos do Notion"
-url = "resources/notion-templates"
+name = "Modelos"
+url = "resources/templates"
 weight = 2
 
 [[main]]
@@ -46,7 +46,6 @@ weight = 4
 name = "Contato"
 url = "contact-us"
 weight = 5
-
 
 [[footer]]
 name = "Links Rápidos"
@@ -57,68 +56,51 @@ columns = 2
 
 [[footer]]
 parent = "Links Rápidos"
-name = "Scrum"
-url = "resources/scrum"
-weight = 1
-
-[[footer]]
-parent = "Links Rápidos"
-name = "Notion Templates"
-url = "resources/notion-templates"
-weight = 2
-
-[[footer]]
-parent = "Links Rápidos"
-name = "Blog"
-url = "blog"
-weight = 3
-
-[[footer]]
-parent = "Links Rápidos"
-name = "Sobre"
-url = "about-us"
-weight = 4
-
-[[footer]]
-parent = "Links Rápidos"
-name = "Contato"
-url = "contact-us"
-weight = 5
-
-[[footer]]
-parent = "Links Rápidos"
-name = "Termos de Serviço"
-url = "privacy-policy"
-weight = 6
-
-[[footer]]
-name = "Produtos"
-hasChildren = true
-weight = 2
-
-[[footer]]
-parent = "Produtos"
 name = "Treinamento"
 url = "services/training"
 weight = 1
 
 [[footer]]
-parent = "Produtos"
-name = "Workflow"
+parent = "Links Rápidos"
+name = "Fluxo de Trabalho"
 url = "services/workflow"
 weight = 2
 
 [[footer]]
-parent = "Produtos"
-name = "Design"
-url = "services/design"
+parent = "Links Rápidos"
+name = "Scrum"
+url = "resources/scrum"
 weight = 3
 
 [[footer]]
-parent = "Produtos"
-name = "Desenvolvimento"
-url = "services/development"
+parent = "Links Rápidos"
+name = "Modelos"
+url = "resources/templates"
 weight = 4
+
+[[footer]]
+parent = "Links Rápidos"
+name = "Blog"
+url = "blog"
+weight = 5
+
+[[footer]]
+parent = "Links Rápidos"
+name = "Sobre"
+url = "about-us"
+weight = 6
+
+[[footer]]
+parent = "Links Rápidos"
+name = "Contato"
+url = "contact-us"
+weight = 7
+
+[[footer]]
+parent = "Links Rápidos"
+name = "Loja Notion"
+url = "https://avantistudio.gumroad.com/"
+weight = 8
 
 [[footer_links]]
 name = "Termos de Serviço"
