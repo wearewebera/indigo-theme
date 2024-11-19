@@ -1,0 +1,8 @@
+{{ $params := dict
+        "Context" .
+        "Classes" (.Get "class")
+        "Title" (index $.Page.Params (.Get "context") "Title")
+        "Content" (index $.Page.Params (.Get "context") "Content")
+        "Icon" ((index $.Page.Params (.Get "context") "Icon"))
+}}
+{{ partial "partials/components/contact-form.html" $params }}

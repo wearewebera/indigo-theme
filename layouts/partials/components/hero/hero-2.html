@@ -8,10 +8,8 @@
       <div class="col-12 col-md-8 col-lg-6">
         <h1 class="display-4 fw-semibold mb-4 text-white">{{ .Title | safeHTML }}</h1>
         <p class="text-light mb-4">{{ .Subtitle | safeHTML }}</p>
-          {{ if .Button }}
-              {{ with .Button }}
-                <a href="{{ .Link }}" title="{{ .Label }}" class="btn btn-light btn-lg">{{ .Label }}</a>
-              {{ end }}
+          {{ with .Button }}
+            <a href="{{ .Link }}" title="{{ .Label }}" class="btn btn-light btn-lg">{{ .Label }}</a>
           {{ end }}
       </div>
     </div>

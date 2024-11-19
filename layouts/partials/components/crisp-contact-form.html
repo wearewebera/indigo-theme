@@ -1,0 +1,13 @@
+{{ $classes := .Classes }}
+{{ with site.Params.crisp_form }}
+    {{ if .enable }}
+      <iframe class="{{ $classes }}"
+              title="Contact Form"
+              src="https://plugins.crisp.chat/urn:crisp.im:contact-form:0/contact/{{ .Id }}"
+              referrerpolicy="origin"
+              sandbox="allow-forms allow-popups allow-scripts allow-same-origin"
+              width="100%"
+              height="550px"
+              frameborder="0"></iframe>
+    {{ end }}
+{{ end }}

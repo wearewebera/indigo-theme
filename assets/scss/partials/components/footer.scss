@@ -28,7 +28,8 @@ footer {
     transition: background 0.3s;
 
     &:hover {
-      background: $secondary;
+      background: $primary;
+      color: $light;
     }
   }
 

@@ -1,0 +1,17 @@
+<div class="card-2 container">
+  <div class="row g-5">
+      {{ $itemCount := len .Items }}
+      {{ range $index, $item := .Items }}
+        <div class="{{ if eq $itemCount 1 }}col-12{{ else }}col-12 col-md-6{{ end }}">
+          <div class="mb-4">
+            <span class="icon text-white bg-secondary p-3 d-flex align-items-center justify-content-center rounded-circle">
+              <i class="{{ $item.icon }}"></i>
+            </span>
+          </div>
+          <div class="h5 text-primary">{{ $item.label }}</div>
+          <h2>{{ $item.title | markdownify }}</h2>
+          <p class="text-muted">{{ $item.content | markdownify }}</p>
+        </div>
+      {{ end }}
+  </div>
+</div>
