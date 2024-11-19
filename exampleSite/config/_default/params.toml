@@ -28,6 +28,10 @@ id = "GTM-5ZSTTTZM"
 enable = true
 id = "0790d7b5-508a-4c48-9a15-3a4a2c0e24c4"
 
+[crisp_form]
+enable = true
+id = "0790d7b5-508a-4c48-9a15-3a4a2c0e24c4"
+
 [[social]]
 title = "linkedin"
 icon = "fa-brands fa-linkedin-in"

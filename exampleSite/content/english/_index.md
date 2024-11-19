@@ -128,17 +128,17 @@ faq:
 
 {{< hero-1 context="hero" id="home-hero" bg-color="light" dark="false" btn-color="secondary" >}}
 
-{{< section context="about" id="about" >}}
+{{< section id="about" >}}
 {{< section-header-2 context="about" >}}
 {{< card-1 context="about" >}}
 {{< / section >}}
 
-{{< section context="pricing" id="pricing-list" bg-color="primary" >}}
+{{< section id="pricing-list" bg-color="primary" >}}
 {{< section-header-1 context="pricing" dark="true" >}}
 {{< stripe-pricing-table id="prctbl_1NfU8eJjrajadOcoRkTGoqgN" key="pk_live_51Mrga0JjrajadOcoVb3wdSfsIDb9hET8066c27EmdhB5U2Iat6XsblgCihBlsV4Ep9LNKUNpNj4sGm7YgqalSMCu00Mc7DDBkA" >}}
 {{< / section >}}
 
-{{< section context="faq" id="faq" bg-color="light" >}}
+{{< section id="faq" bg-color="light" >}}
 {{< section-header-1 context="faq" >}}
 {{< faq context="faq" >}}
 {{< / section >}}
