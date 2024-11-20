@@ -2,13 +2,13 @@
   <div class="row flex-row-reverse g-4 h-100">
     <div class="col-12 col-md-6">
       <div
-        class="bg-primary h-100 d-flex flex-column justify-content-center justify-content-md-start justify-content-lg-center p-5">
+        class="text-bg-primary h-100 d-flex flex-column justify-content-center justify-content-md-start justify-content-lg-center p-5">
           {{ with .Main }}
             <div class="mb-4">
               <i class="main-icon text-secondary {{ .Icon }}"></i>
             </div>
-            <h2 class="mb-3 text-white">{{ .Title | safeHTML }}</h2>
-            <p class="text-white">{{ .Content | safeHTML }}</p>
+            <h2 class="mb-3">{{ .Title | safeHTML }}</h2>
+            <p>{{ .Content | safeHTML }}</p>
           {{ end }}
       </div>
     </div>

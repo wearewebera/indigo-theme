@@ -3,6 +3,8 @@
 @import "bootstrap/functions";
 @import "bootstrap/variables";
 
+$min-contrast-ratio: 1.6;
+
 $primary: h.$primary_color;
 $secondary: h.$secondary_color;
 

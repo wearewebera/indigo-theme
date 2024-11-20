@@ -1,0 +1,72 @@
+{{ define "main" }}
+  <article class="container pt-8 pb-6">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-10">
+        <header>
+          <div class="metadata">
+            <h1 class="mb-4">{{ .Title }}</h1>
+            <div class="row align-items-center g-3 mb-4">
+                {{ with site.GetPage (string .Params.Author | urlize | lower) }}
+                    {{ if .Params.image }}
+                      <div class="col-auto">
+                        <a href="{{ .RelPermalink }}" title="{{ .Title }}">
+                            {{ partial "image" (dict "Src" .Params.image "Alt" .Title "Class" "rounded-circle" "Command" "Fill" "Size" "48x48") }}
+                        </a>
+                      </div>
+                    {{ end }}
+                {{ end }}
+              <div class="col">
+                  {{ with site.GetPage (string .Params.Author | urlize | lower) }}
+                      {{ if .Title }}
+                        <a class="fw-600 text-dark" href="{{ .RelPermalink }}">
+                            {{ .Title }}
+                        </a>
+                      {{ end }}
+                  {{ end }}
+                <p class="small text-muted mb-0">
+                  <i class="fa-regular fa-clock me-1"></i> {{ .ReadingTime }} {{ i18n `min_read` }}
+                  <span class="mx-2">·</span>
+                  <i class="fa-regular fa-calendar me-1"></i> {{ time.Format ":date_long" .PublishDate }}
+                </p>
+              </div>
+            </div>
+          </div>
+            {{ with .Params.image }}
+              <div class="mb-4">
+                  {{ partial "image" (dict "Src" . "Alt" $.Title "Class" "w-100 h-auto rounded") }}
+              </div>
+            {{ end }}
+        </header>
+        <div class="mb-5 markdown">{{ .Content }}</div>
+          {{ with site.GetPage (string .Params.Author | urlize | lower) }}
+            <div class="bg-light p-4 rounded">
+              <div class="row g-4">
+                  {{ with .Params.image }}
+                    <div class="col-12 col-md-auto">
+                        {{ partial "image" (dict "Src" . "Alt" $.Title "Class" "rounded-circle" "Command" "Fill" "Size" "80x80") }}
+                    </div>
+                  {{ end }}
+                <div class="col">
+                  <div>
+                    <a href="{{ .RelPermalink }}" class="fs-5 fw-semibold">{{ .Title }}</a>
+                  </div>
+                  <p class="text-muted">{{ .Summary }}</p>
+                    {{ if isset .Params "social" }}
+                      <ul class="list-inline m-0">
+                          {{ range .Params.social }}
+                            <li class="list-inline-item">
+                              <a href="{{ .link | safeURL }}">
+                                <i class="{{ .icon }}"></i>
+                              </a>
+                            </li>
+                          {{ end }}
+                      </ul>
+                    {{ end }}
+                </div>
+              </div>
+            </div>
+          {{ end }}
+      </div>
+    </div>
+  </article>
+{{ end }}
