@@ -22,7 +22,7 @@
         <p class="{{ if $isDark }}text-light{{ else }}text-muted{{ end }}">{{ .Content | markdownify }}</p>
           {{ if .Button }}
               {{ with .Button }}
-                <a href="{{ .Link }}" title="{{ .Label }}" class="btn btn-{{ .Color }} {{ .Size }} mt-4">{{ .Label }}</a>
+                <a href="{{ .Link }}" title="{{ .Label }}" class="btn btn-{{ .Color }} btn-{{ .Size }} mt-4">{{ .Label }}</a>
               {{ end }}
           {{ end }}
       </div>

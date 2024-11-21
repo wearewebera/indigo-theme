@@ -2,12 +2,12 @@
 {{ $size := printf "%dx%d" $image.Width $image.Height }}
 {{ $image := $image.Resize (printf "%s webp q80" $size) }}
 
-<section id="{{ .Id }}" class="hero {{ .Classes }}" style="--hero-bg: url('{{ $image.RelPermalink }}')">
+<section id="{{ .Id }}" class="hero-2 text-bg-primary {{ .Classes }}" style="--hero-bg: url('{{ $image.RelPermalink }}')">
   <div class="container">
     <div class="row align-items-center">
       <div class="col-12 col-md-8 col-lg-6">
-        <h1 class="display-4 fw-semibold mb-4 text-white">{{ .Title | safeHTML }}</h1>
-        <p class="text-light mb-4">{{ .Subtitle | safeHTML }}</p>
+        <h1 class="display-4 fw-semibold mb-4">{{ .Title | safeHTML }}</h1>
+        <p class="mb-4">{{ .Subtitle | safeHTML }}</p>
           {{ with .Button }}
             <a href="{{ .Link }}" title="{{ .Label }}" class="btn btn-light btn-lg">{{ .Label }}</a>
           {{ end }}

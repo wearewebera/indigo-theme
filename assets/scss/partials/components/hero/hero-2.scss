@@ -1,9 +1,8 @@
-.hero {
+.hero-2 {
   position: relative;
   background-image: var(--hero-bg);
   background-size: cover;
   background-position: center;
-  background-color: $primary;
   padding-top: 200px;
   padding-bottom: 120px;
 
@@ -15,7 +14,8 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba($primary, 0.8);
+    background-color: $primary;
+    opacity: 0.8;
   }
 
   * {

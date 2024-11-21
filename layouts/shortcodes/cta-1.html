@@ -1,9 +1,9 @@
 {{ $button := dict
         "Button" .
         "Link" (index $.Page.Params (.Get "context") "Button" "Link")
-        "Label" (index $.Page.Params (.Get "context")
-        "Button" "Label")
+        "Label" (index $.Page.Params (.Get "context") "Button" "Label")
         "Color" (.Get "btn-color")
+        "Size" "md"
 }}
 {{ $params := dict
         "Context" .

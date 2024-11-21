@@ -24,8 +24,7 @@
   <section class="py-7">
     <div class="container">
       <h2 class="h3 mb-5">{{ i18n `latest_posts` }}</h2>
-         <!-- TODO pegar so os posts do autor da section blog -->
-        {{ $pages := where site.RegularPages "Params.author" .Title }}
+        {{ $pages := where (where site.RegularPages "Params.author" .Title) "Section" "blog" }}
       <div class="row g-5 gy-0">
           {{ range first 6 $pages.ByDate.Reverse }}
             <div class="col-12 col-lg-6">
