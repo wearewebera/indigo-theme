@@ -29,3 +29,8 @@
       <link rel="stylesheet" type="text/css" href="{{ $customstyle.RelPermalink }}">
     {{ end }}
 {{ end }}
+
+{{ $crispCss := ((resources.Get "css/custom-crisp-form.css") | resources.ExecuteAsTemplate "css/custom-crisp-form.css" . | toCSS) | resources.Minify }}
+{{ with $crispCss }}
+  {{ $crispCss.Publish }}
+{{ end }}
