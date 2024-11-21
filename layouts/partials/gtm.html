@@ -1,5 +1,7 @@
 {{ with site.Params.google_tag_manager }}
     {{ if .enable }}
+      <link rel="preconnect" href="//www.googletagmanager.com">
+
       <script>(function(w, d, s, l, i) {
         w[l] = w[l] || [];
         w[l].push({
