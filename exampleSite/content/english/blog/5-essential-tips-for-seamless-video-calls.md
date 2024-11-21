@@ -3,7 +3,7 @@ title: "5 Essential Tips for Seamless Video Calls"
 description: "During quarantine, flexibility is the highest priority in everyone's life working from home, and technology is the central driver of this flexibility. Video calls are one of the most practical ways to hold meetings and virtually connect with all our work partners. But still, it is not always so easy. So, let's share some essential tips to help you using Google Meet."
 keywords: "video calls, video conferencing, remote work, work from home, Google Meet"
 author: "Joel Zamboni"
-image: "img/blog/5-essential-tips-for-seamless-video-calls.png"
+image: "img/content/blog/5-essential-tips-for-seamless-video-calls.png"
 featured: true
 ---
 

@@ -4,13 +4,13 @@ logo_webp = true
 logo_text = "My Website"
 favicon = "img/favicon.png"
 
-customcss = ["css/custom.css"] # Optional
-customjs = ["js/custom.js"] # Optional
+customcss = ["css/custom.css"]
+customjs = ["js/custom.js"]
 
 [style]
 primary_color = '#21519f'
 secondary_color = '#f9bc56'
-font_family = 'Inter' # Optional
+font_family = 'Inter'
 
 [metadata]
 author = "Webera"

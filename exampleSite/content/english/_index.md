@@ -2,7 +2,7 @@
 hero:
   title: "Scrum Master as a Service: <span class=\"text-bg-primary\">Accelerating Agile Excellence</span>"
   subtitle: "Transform your team's effectiveness with expert Scrum Masters in just two weeks. Get immediate access to Agile expertise without the hassle of hiring, backed by our network of practitioners. Start your journey to better project delivery today."
-  image: "img/home/hero.png"
+  image: "img/content/home/hero.png"
   button:
     label: "Get Started"
     link: "#pricing-list"

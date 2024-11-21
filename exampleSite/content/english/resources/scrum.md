@@ -6,7 +6,7 @@ keywords: "Scrum Agile Scrum Master"
 hero:
   title: "Maximize Team Efficiency <span class=\"bg-secondary\">with Scrum</span>"
   subtitle: "At Avanti Studio, we empower our clients to take full control of their productivity. That’s why we offer comprehensive training programs to help you leverage Notion to its fullest potential, whether you’re a beginner just getting started or an experienced user looking to optimize your workflow."
-  image: "img/resources/scrum/hero.png"
+  image: "img/content/resources/scrum/hero.png"
   button:
     label: "Start Trial Now"
     link: "/#pricing-list"
@@ -52,7 +52,7 @@ Each of these roles has a unique set of responsibilities, and all must work toge
 of Scrum. The collaboration between these roles forms the foundation of any Scrum project and helps deliver high-value
 products iteratively and incrementally.
 
-<img alt="scrum-master" src="/img/resources/scrum/scrum-master.png" style="height: 300px" class="image-right" />
+<img alt="scrum-master" src="/img/content/resources/scrum/scrum-master.png" style="height: 300px" class="image-right" />
 
 ### Scrum Master
 
@@ -68,7 +68,7 @@ Team's work. This role represents the interests of stakeholders and customers. T
 Backlog, defining and prioritizing its items, and ensures that the team works on the most valuable features or tasks.
 They also represent the customer's voice, ensuring that the team understands the users' needs and wants.
 
-<img alt="development-team" src="/img/resources/scrum/development-team.png" style="height: 300px" class="image-left" />
+<img alt="development-team" src="/img/content/resources/scrum/development-team.png" style="height: 300px" class="image-left" />
 
 ### Development Team
 
@@ -116,7 +116,7 @@ The Product Backlog is never complete. As long as the product exists, something 
 living document that reflects the work needed to improve the product, address user needs, and provide value to the
 business.
 
-<img alt="product-owner" src="/img/resources/scrum/product-owner.png" style="height: 300px" class="image-right" />
+<img alt="product-owner" src="/img/content/resources/scrum/product-owner.png" style="height: 300px" class="image-right" />
 
 ## Epics
 
@@ -159,7 +159,7 @@ changing requirements and feedback from stakeholders.
 Each Sprint is punctuated by a series of key ceremonies. These ceremonies provide structure and rhythm to the team's
 work, guide collaboration, and foster transparency, inspection, and adaptation, which are essential Scrum values.
 
-<img alt="daily-scrum" src="/img/resources/scrum/daily-scrum.png" style="height: 300px" class="image-right" />
+<img alt="daily-scrum" src="/img/content/resources/scrum/daily-scrum.png" style="height: 300px" class="image-right" />
 
 ## Daily Scrum
 
@@ -175,7 +175,7 @@ active participation in the meeting. Without the Scrum Master or Product Owner, 
 the Scrum Team is self-managing.
 In-depth discussion or backlog refinement should be done separately to keep this meeting short and focused.
 
-<img alt="planning" src="/img/resources/scrum/planning.png" style="height: 300px" class="image-left" />
+<img alt="planning" src="/img/content/resources/scrum/planning.png" style="height: 300px" class="image-left" />
 
 ## Planning
 
@@ -199,7 +199,7 @@ required effort, and prioritizing their execution based on their importance and 
 Backlog Refinement ensures that the backlog remains up-to-date, relevant, and appropriately structured, helping the team
 focus on high-value tasks and align their work with the product goals.
 
-<img alt="backlog-refinement" src="/img/resources/scrum/backlog-refinement.png" style="height: 300px" class="image-right" />
+<img alt="backlog-refinement" src="/img/content/resources/scrum/backlog-refinement.png" style="height: 300px" class="image-right" />
 
 In this meeting, the Product Owner, the Scrum Master, and the Development Team collaborate to ensure that the product
 backlog items are clearly defined, appropriately prioritized, and ready for development in upcoming sprints.
@@ -214,7 +214,7 @@ time on backlog refinement activities.
 The Sprint Review is a time to inspect the outcome of the Sprint and determine future adaptations. The Scrum Team
 showcases the results of their work to key stakeholders, and the progress towards the Product Goal is discussed.
 
-<img alt="review" src="/img/resources/scrum/review.png" style="height: 300px" class="image-left" />
+<img alt="review" src="/img/content/resources/scrum/review.png" style="height: 300px" class="image-left" />
 
 During the Sprint Review, the Scrum Team and stakeholders review what was achieved during the Sprint and what has
 changed in their surroundings. Based on this information, the group collaborates on the next steps, possibly adjusting
@@ -229,7 +229,7 @@ The Sprint Retrospective occurs at the end of each Sprint, providing a time for 
 both positive and negative, during the last Sprint. It also allows the team to evaluate their routines and processes to
 optimize how they work together.
 
-<img alt="retrospective" src="/img/resources/scrum/retrospective.png" style="height: 300px" class="image-right" />
+<img alt="retrospective" src="/img/content/resources/scrum/retrospective.png" style="height: 300px" class="image-right" />
 
 This Notion template has a standard template used within Notion to conduct the Sprint Retrospective, where participants
 indicate what went well, what could have been better, and what practices should continue. Any issue that needs follow-up

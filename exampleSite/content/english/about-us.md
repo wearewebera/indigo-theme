@@ -8,7 +8,7 @@ hero:
   subtitle: |
     At Avanti Studio, we believe every team deserves the opportunity to achieve excellence.
     Through our innovative Scrum Master as a Service model, we're making expert Agile leadership accessible to all.
-  image: "img/about-us/hero.jpg"
+  image: "img/content/about-us/hero.jpg"
 
 identity:
   items:

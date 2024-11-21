@@ -1,6 +1,6 @@
 ---
 title: "Joel Zamboni"
-image: "/img/author/joel-zamboni.png"
+image: "/img/content/author/joel-zamboni.png"
 social:
   - icon: "fa-brands fa-instagram"
     name: "instagram"
