@@ -16,6 +16,10 @@ font_family = 'Inter' # Optional
 author = "Webera"
 image = "img/og-image.png"
 
+[google_fonts]
+enable = true
+fonts = ["Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900"]
+
 [cookies]
 enable = true
 expire_days = 30
