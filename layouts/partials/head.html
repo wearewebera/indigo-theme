@@ -1,0 +1,21 @@
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+<meta name="theme-name" content="indigo-theme" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+
+{{ partialCached "favicon" . }}
+
+{{ partial "basic-seo.html" . }}
+
+{{ partial "style.html" . }}
+
+{{ partial "script.html" . }}
+
+{{ if hugo.IsProduction }}
+    {{ partial "gtm.html" }}
+{{ end }}
+
+{{ if hugo.IsProduction }}
+    {{ partial "crisp-chat.html" }}
+{{ end }}

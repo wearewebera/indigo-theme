@@ -1,0 +1,59 @@
+@use "hugo:vars" as h;
+
+@import "bootstrap/functions";
+@import "bootstrap/variables";
+
+$min-contrast-ratio: 1.6;
+
+$primary: h.$primary_color;
+$secondary: h.$secondary_color;
+
+$theme-colors: map-merge(
+  $theme-colors,
+  (
+    "primary": $primary,
+    "secondary": $secondary,
+  )
+);
+
+// Spacing
+$spacers: map-merge(
+  $spacers,
+  (
+    6: $spacer * 4.5,
+    7: $spacer * 6,
+    8: $spacer * 7.5,
+    9: $spacer * 9,
+    10: $spacer * 10.5,
+  )
+);
+
+$font-family-sans-serif: h.$font_family;
+
+// Dropdown
+$dropdown-border-radius: 0;
+$dropdown-border-width: 0;
+$dropdown-link-active-bg: $primary;
+
+// Navbar
+$navbar-light-color: $primary;
+
+// Links
+$link-color: $primary;
+$link-hover-color: $dark;
+$link-decoration: none;
+
+// Pagination
+$pagination-active-bg: $primary;
+$pagination-active-color: $white;
+$pagination-active-border-color: $primary;
+
+// Accordion
+$accordion-button-active-bg: $primary;
+$accordion-button-active-color: $white;
+$accordion-icon-active-color: $white;
+$accordion-icon-color: $white;
+$accordion-button-focus-box-shadow: 0 0 0 0.2rem rgba($secondary, 0.25);
+$accordion-button-active-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='#{$accordion-icon-active-color}' stroke-linecap='round' stroke-linejoin='round'><path d='M2 5L8 11L14 5'/></svg>");
+
+@import "bootstrap/bootstrap";

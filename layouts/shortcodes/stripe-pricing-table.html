@@ -1,0 +1,6 @@
+{{ $params := dict
+        "Context" .
+        "TableId" (.Get "id")
+        "Key" (.Get "key")
+}}
+{{ partial "partials/components/stripe-pricing-table.html" $params }}

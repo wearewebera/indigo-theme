@@ -1,0 +1,20 @@
+<div class="contact-form container">
+  <div class="row h-100 g-5">
+    <div class="col-12 col-lg-6">
+        {{ $params := dict
+                "Context" .
+                "Classes" .Classes
+        }}
+        {{ partial "partials/components/crisp-contact-form.html" $params }}
+    </div>
+    <div class="col-6 d-none d-lg-block">
+      <div class="text-bg-primary h-100 d-flex flex-column justify-content-center p-5">
+        <div class="mb-4">
+          <i class="icon text-secondary {{ .Icon }}"></i>
+        </div>
+        <h2 class="mb-3">{{ .Title }}</h2>
+        <p>{{ .Content }}</p>
+      </div>
+    </div>
+  </div>
+</div>

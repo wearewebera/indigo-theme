@@ -1,0 +1,67 @@
+{{ define "main" }}
+  <section class="pt-9 pb-6 text-bg-light">
+    <div class="container">
+      <div class="mb-3">
+        <span class="badge text-bg-secondary fs-6">
+          {{ i18n `latest_post` }}
+        </span>
+      </div>
+        {{ range first 1 (where .Data.Pages "Params.featured" true).ByDate.Reverse }}
+          <article>
+            <a href="{{ .Permalink }}">
+              <div class="row justify-content-between mb-2">
+                <div class="col-12{{ if .Params.image }} col-lg-6{{ else }} col-lg-8{{ end }}">
+                  <h2 class="mb-4">{{ .Title }}</h2>
+                  <h3 class="fs-6 fw-normal text-muted">{{ .Description }}</h3>
+                </div>
+                  {{ if .Params.image }}
+                    <div class="col-12 col-lg-5 d-none d-lg-block">
+                        {{ partial "image" (dict "Src" .Params.image "Alt" .Title "Class" "mw-100 object-fit-cover rounded" "Size" "512x200") }}
+                    </div>
+                  {{ end }}
+              </div>
+            </a>
+            <div class="row g-0 align-items-center">
+                {{ with site.GetPage (string .Params.Author | urlize | lower) }}
+                  <div class="col-auto">
+                    <div class="row g-2 align-items-center">
+                        {{ if .Params.image }}
+                          <div class="col-auto">
+                            <a href="{{ .RelPermalink }}">
+                                {{ partial "image" (dict "Src" .Params.image "Alt" .Title "Class" "rounded-circle" "Command" "Fill" "Size" "24x24") }}
+                            </a>
+                          </div>
+                        {{ end }}
+                      <div class="col">
+                        <a href="{{ .RelPermalink }}" class="small text-muted">{{ .Title }}</a>
+                      </div>
+                    </div>
+                  </div>
+                {{ end }}
+              <div class="col-auto">
+                <p class="small m-0">
+                  <span class="ms-3 mx-2">·</span>
+                  <i class="fa-regular fa-clock me-1"></i> {{ .ReadingTime }} {{ i18n `min_read` }}
+                  <span class="mx-2">·</span>
+                  <i class="fa-regular fa-calendar me-1"></i> {{ time.Format ":date_long" .PublishDate }}
+                </p>
+              </div>
+            </div>
+          </article>
+        {{ end }}
+    </div>
+  </section>
+  <section class="blog-posts pt-9 pb-7">
+    <div class="container">
+      <div class="row g-5 gy-0">
+          {{ $paginator := .Paginate .Data.Pages }}
+          {{ range $paginator.Pages }}
+            <div class="col-12 col-lg-6">
+                {{ partial "components/post-summary" . }}
+            </div>
+          {{ end }}
+      </div>
+        {{ partial "components/pagination" . }}
+    </div>
+  </section>
+{{ end }}

@@ -1,0 +1,40 @@
+{{ $js := resources.Get "js/bootstrap.js" }}
+{{ $params := dict }}
+{{ $sourceMap := cond hugo.IsProduction "" "inline" }}
+{{ $opts := dict "sourceMap" $sourceMap "minify" hugo.IsProduction "target" "es2018" "params" $params }}
+{{ $js = $js | js.Build $opts }}
+{{ if hugo.IsProduction }}
+    {{ $js = $js | fingerprint }}
+{{ end }}
+<script
+  src="{{ $js.RelPermalink }}"
+  {{ if hugo.IsProduction }}integrity="{{ $js.Data.Integrity }}"{{ end }}
+  defer></script>
+
+{{ with site.Params.cookies }}
+    {{ if .enable }}
+        {{ with resources.Get "js/cookie.js" }}
+          <script src="{{ .RelPermalink }}" defer></script>
+        {{ end }}
+    {{ end }}
+{{ end }}
+
+{{ with resources.Get "js/main.js" }}
+  <script src="{{ .RelPermalink }}" defer></script>
+{{ end }}
+
+{{ if templates.Exists ("partials/script/custom.html") }}
+    {{ partial "partials/script/custom.html" . }}
+{{ end }}
+
+{{ if isset site.Params "customjs" }}
+    {{ range site.Params.customjs }}
+        {{ $customjs := resources.Get . | fingerprint }}
+      <script src="{{ $customjs.RelPermalink }}" defer></script>
+    {{ end }}
+{{ end }}
+
+{{ $crispJs := ((resources.Get "js/custom-crisp-form.js") | resources.ExecuteAsTemplate "js/custom-crisp-form.js" .) | resources.Minify }}
+{{ with $crispJs }}
+    {{ $crispJs.Publish }}
+{{ end }}

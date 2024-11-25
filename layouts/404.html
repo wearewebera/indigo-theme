@@ -1,0 +1,17 @@
+{{ define "main" }}
+    {{ with site.Params.notFound }}
+      <div class="container pt-10 pb-6">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-8 text-center">
+            <h1>{{ .Title }}</h1>
+            <p>{{ .Content }}</p>
+            <p>
+              <a class="btn btn-primary" href="{{ site.BaseURL | relLangURL }}">
+                  {{ .Button }}
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    {{ end }}
+{{ end }}

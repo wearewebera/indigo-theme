@@ -1,0 +1,15 @@
+<div class="card-1 container">
+  <div class="row g-4 h-100">
+      {{ range $index, $item := .Items }}
+        <div class="col-12 col-md-6">
+          <div class="text-bg-light p-4 p-lg-5 h-100 rounded">
+            <div class="mb-4">
+              <i class="fs-1 text-secondary {{ $item.icon }}"></i>
+            </div>
+            <div class="h2 mb-3 text-primary">{{ $item.title }}</div>
+            <p class="text-muted">{{ $item.content | markdownify }}</p>
+          </div>
+        </div>
+      {{ end }}
+  </div>
+</div>

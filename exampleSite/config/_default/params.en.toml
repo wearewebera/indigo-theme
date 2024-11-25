@@ -1,0 +1,15 @@
+[metadata]
+keywords = ["Webera", "Hugo", "Theme"]
+description = "This is default meta description"
+
+[cookies]
+content = "This site uses cookies. By continuing to use this website, you agree to their use."
+button = "I Accept"
+
+[footer]
+copyright = "© All rights reserved."
+
+[notFound]
+title = "404"
+content = "The page you are looking for doesn't exist."
+button = "Back to Home"

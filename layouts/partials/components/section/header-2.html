@@ -1,0 +1,14 @@
+{{ $isDark := false }}
+{{ if eq .Dark "true" }}
+    {{ $isDark = true }}
+{{ end }}
+<div class="section-header-2 container">
+  <div class="row align-items-center mb-7">
+    <div class="col-12 col-md-6 mb-4 mb-md-0">
+      <h2 class="h1 text-center text-md-start{{ if $isDark }} text-white{{ end }}">{{ .Title | safeHTML }}</h2>
+    </div>
+    <div class="col-12 col-md-6">
+      <p class="text-center text-md-start {{ if $isDark }}text-white{{ else }}text-muted{{ end }}">{{ .Subtitle | safeHTML }}</p>
+    </div>
+  </div>
+</div>

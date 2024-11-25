@@ -1,0 +1,113 @@
+[[main]]
+name = "Serviços"
+hasChildren = true
+weight = 1
+
+[[main]]
+parent = "Serviços"
+name = "Treinamento"
+url = "services/training"
+weight = 1
+
+[[main]]
+parent = "Serviços"
+name = "Fluxo de Trabalho"
+url = "services/workflow"
+weight = 2
+
+[[main]]
+name = "Recursos"
+hasChildren = true
+weight = 2
+
+[[main]]
+parent = "Recursos"
+name = "Scrum"
+url = "resources/scrum"
+weight = 1
+
+[[main]]
+parent = "Recursos"
+name = "Modelos"
+url = "resources/templates"
+weight = 2
+
+[[main]]
+name = "Blog"
+url = "blog"
+weight = 3
+
+[[main]]
+name = "Sobre"
+url = "about-us"
+weight = 4
+
+[[main]]
+name = "Contato"
+url = "contact-us"
+weight = 5
+
+[[footer]]
+name = "Links Rápidos"
+hasChildren = true
+weight = 1
+[[footer.params]]
+columns = 2
+
+[[footer]]
+parent = "Links Rápidos"
+name = "Treinamento"
+url = "services/training"
+weight = 1
+
+[[footer]]
+parent = "Links Rápidos"
+name = "Fluxo de Trabalho"
+url = "services/workflow"
+weight = 2
+
+[[footer]]
+parent = "Links Rápidos"
+name = "Scrum"
+url = "resources/scrum"
+weight = 3
+
+[[footer]]
+parent = "Links Rápidos"
+name = "Modelos"
+url = "resources/templates"
+weight = 4
+
+[[footer]]
+parent = "Links Rápidos"
+name = "Blog"
+url = "blog"
+weight = 5
+
+[[footer]]
+parent = "Links Rápidos"
+name = "Sobre"
+url = "about-us"
+weight = 6
+
+[[footer]]
+parent = "Links Rápidos"
+name = "Contato"
+url = "contact-us"
+weight = 7
+
+[[footer]]
+parent = "Links Rápidos"
+name = "Loja Notion"
+url = "https://avantistudio.gumroad.com/"
+weight = 8
+
+[[footer_links]]
+name = "Termos de Serviço"
+url = "terms-of-service"
+weight = 1
+
+[[footer_links]]
+name = "Política de Privacidade"
+url = "privacy-policy"
+weight = 2

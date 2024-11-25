@@ -1,0 +1,19 @@
+{{ $button := dict
+        "Button" .
+        "Link" (index $.Page.Params (.Get "context") "Button" "Link")
+        "Label" (index $.Page.Params (.Get "context") "Button" "Label")
+        "Color" (.Get "btn-color")
+        "Size" "lg"
+}}
+{{ $params := dict
+        "Context" .
+        "Id" (.Get "id")
+        "Classes" (.Get "class")
+        "Title" (index $.Page.Params (.Get "context") "Title")
+        "Subtitle" (index $.Page.Params (.Get "context") "Subtitle")
+        "Image" ((index $.Page.Params (.Get "context") "Image"))
+        "BgColor" (.Get "bg-color")
+        "Dark" (.Get "dark")
+        "Button" $button
+}}
+{{ partial "partials/components/hero/hero-1.html" $params }}

@@ -1,0 +1,37 @@
+{{ define "main" }}
+  <section class="pt-9 pb-5 bg-light">
+    <div class="container">
+        {{ with .Params.Image }}
+          <div class="mb-4">
+              {{ partial "image" (dict "Src" . "Alt" $.Title "Class" "rounded-circle" "Command" "Fill" "Size" "120x120") }}
+          </div>
+        {{ end }}
+      <h1 class="h3">{{ .Title }}</h1>
+      <div class="text-muted">{{ .Content }}</div>
+        {{ if isset .Params "social" }}
+          <ul class="list-inline">
+              {{ range .Params.Social }}
+                <li class="list-inline-item mb-0">
+                  <a href="{{ .link | safeURL }}" target="_blank">
+                    <i class="{{ .icon }}"></i>
+                  </a>
+                </li>
+              {{ end }}
+          </ul>
+        {{ end }}
+    </div>
+  </section>
+  <section class="py-7">
+    <div class="container">
+      <h2 class="h3 mb-5">{{ i18n `latest_posts` }}</h2>
+        {{ $pages := where (where site.RegularPages "Params.author" .Title) "Section" "blog" }}
+      <div class="row g-5 gy-0">
+          {{ range first 6 $pages.ByDate.Reverse }}
+            <div class="col-12 col-lg-6">
+                {{ partial "components/post-summary" . }}
+            </div>
+          {{ end }}
+      </div>
+    </div>
+  </section>
+{{ end }}
