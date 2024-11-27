@@ -13,7 +13,7 @@
           {{ $image := resources.Get .Image }}
           {{ $size := printf "%dx%d" $image.Width $image.Height }}
           {{ $image := $image.Resize (printf "%s webp q80" $size) }}
-          {{ partial "image" (dict "Src" ($image | relLangURL) "alt" .Title "Size" $size "Command" "Fit") }}
+          {{ partial "image" (dict "Src" ($image | relURL) "alt" .Title "Size" $size "Command" "Fit") }}
       </div>
       <div class="col-12 col-lg-6">
         <h2 class="mb-4 {{ if $isDark }}text-white{{ end }}">
