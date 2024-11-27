@@ -7,7 +7,7 @@ content = "This site uses cookies. By continuing to use this website, you agree 
 button = "I Accept"
 
 [footer]
-copyright = "© All rights reserved."
+copyright = "Avanti Studio, all rights reserved."
 
 [notFound]
 title = "404"
