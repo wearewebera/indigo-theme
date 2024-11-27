@@ -21,9 +21,9 @@
                   {{ end }}
               </div>
             </a>
-            <div class="row g-0 align-items-center">
+            <div class="row g-2 g-md-0 align-items-center">
                 {{ with site.GetPage (string .Params.Author | urlize | lower) }}
-                  <div class="col-auto">
+                  <div class="col-12 col-md-auto">
                     <div class="row g-2 align-items-center">
                         {{ if .Params.image }}
                           <div class="col-auto">
@@ -38,9 +38,9 @@
                     </div>
                   </div>
                 {{ end }}
-              <div class="col-auto">
+              <div class="col-12 col-md-auto">
                 <p class="small m-0">
-                  <span class="ms-3 mx-2">·</span>
+                  <span class="ms-3 mx-2 d-none d-md-inline">·</span>
                   <i class="fa-regular fa-clock me-1"></i> {{ .ReadingTime }} {{ i18n `min_read` }}
                   <span class="mx-2">·</span>
                   <i class="fa-regular fa-calendar me-1"></i> {{ time.Format ":date_long" .PublishDate }}
@@ -51,7 +51,7 @@
         {{ end }}
     </div>
   </section>
-  <section class="blog-posts pt-9 pb-7">
+  <section class="blog-posts py-7">
     <div class="container">
       <div class="row g-5 gy-0">
           {{ $paginator := .Paginate .Data.Pages }}
