@@ -31,6 +31,23 @@ notion-store:
 In the pursuit of seamless Scrum implementation, our templates serve as powerful tools to facilitate and enhance your
 organizational agility. Here’s how our Notion templates can transform your Scrum framework:
 
+### 1. Technology Roadmap Template
+
+Optimize your organization’s technological growth and decision-making. Categorize technologies, connect with relevant
+teams, and ensure collaborative planning.
+
+<img alt="scrum-master" src="/img/content/resources/templates/technology-roadmap.png" style="height: 400px" class="image-right" />
+
+### 2. Agile Business Hub: Unified Backlog Scrum Template
+
+Unify your organization within the Agile framework. Foster collaboration, transparency, and efficiency with
+cross-department integration, holistic project overviews, scalable sprint planning, and more.
+
+### 3. Daily Scrum Template
+
+Boost your Agile methodology with a template for concise, focused, and efficient Daily Scrum meetings. Keep your team
+aligned, promote effective communication, and elevate your project management.
+
 {{< / markdown >}}
 {{< / article >}}
 {{< / section >}}

@@ -5,6 +5,7 @@ keywords: "video calls, video conferencing, remote work, work from home, Google 
 author: "Joel Zamboni"
 image: "img/content/blog/5-essential-tips-for-seamless-video-calls.png"
 featured: true
+date: 2024-04-15T12:00:00Z
 ---
 
 In today's fast-paced business world, video calls have become an indispensable tool for staying connected with
