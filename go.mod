@@ -1,4 +1,4 @@
-module indigo-theme
+module github.com/wearewebera/indigo-theme
 
 go 1.22.5
 

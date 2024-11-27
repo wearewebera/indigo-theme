@@ -45,4 +45,4 @@ theme = "github.com/wearewebera/indigo-theme"
 
 ## Documentation
 
-For more details on configuration, customization, and examples, check out the full [Indigo Theme Documentation](/docs). (Link to be added once the documentation is complete.)
+For more details on configuration, customization, and examples, check out the full [Indigo Theme Documentation](/docs).
