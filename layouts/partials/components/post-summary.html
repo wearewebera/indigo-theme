@@ -21,7 +21,7 @@
       </div>
         {{ if .Params.image }}
           <div class="col-12 col-lg-auto d-none d-lg-block">
-              {{ partial "image" (dict "Src" .Params.image "Alt" .Title "Class" "summary-image rounded" "Size" "280x") }}
+              {{ partial "image" (dict "Src" .Params.image "Alt" .Title "Class" "summary-image rounded" "Command" "Fill" "Size" "280x280") }}
           </div>
         {{ end }}
     </div>
