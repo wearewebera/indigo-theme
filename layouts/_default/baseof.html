@@ -22,6 +22,10 @@
 
 {{ partial "cookie-consent.html" . }}
 
+{{ if templates.Exists ("partials/custom-body.html") }}
+    {{ partial "partials/custom-body.html" . }}
+{{ end }}
+
 {{ if templates.Exists ("partials/script/custom-body.html") }}
     {{ partial "partials/script/custom-body.html" . }}
 {{ end }}
