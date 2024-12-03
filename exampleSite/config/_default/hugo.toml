@@ -1,4 +1,5 @@
 baseURL = "https://example.com"
+disableKinds = ["page", "section", "taxonomy", "term"]
 languageCode = "en-us"
 title = "My Website"
 theme = "github.com/wearewebera/indigo-theme"
