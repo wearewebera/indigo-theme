@@ -1,11 +1,10 @@
-github.com/gethugothemes/hugo-modules/images v0.0.0-20240925042433-d2b5d05977e8 h1:rGWMqcpmotd5G+q5HS9p9sC4GQF2hMxEesuJx8aKvKE=
-github.com/gethugothemes/hugo-modules/images v0.0.0-20240925042433-d2b5d05977e8/go.mod h1:FKliP3qOW9diIcQeLtyZ0Hdhg3PL8bdAkC/6O+XtU90=
-github.com/gethugothemes/hugo-modules/seo-tools/basic-seo v0.0.0-20240925042433-d2b5d05977e8 h1:cyhgsUNA0Kr172aab/Iy/K11KODP/lTzlOxuNY497vA=
-github.com/gethugothemes/hugo-modules/seo-tools/basic-seo v0.0.0-20240925042433-d2b5d05977e8/go.mod h1:Q8dPgjamV7pxwKSQyWV21Xwh5CGi23/k+M8HPTphYbs=
+github.com/gethugothemes/hugo-modules/images v0.0.0-20241203025515-30ad48e108af h1:cfoNp7MYX5c+FHAPNQXzJ2+nFwHC/FhVg1qc6K+PYnA=
+github.com/gethugothemes/hugo-modules/images v0.0.0-20241203025515-30ad48e108af/go.mod h1:FKliP3qOW9diIcQeLtyZ0Hdhg3PL8bdAkC/6O+XtU90=
+github.com/gethugothemes/hugo-modules/seo-tools/basic-seo v0.0.0-20241203025515-30ad48e108af h1:rzYGRacELVJHCMCzdIOdNvJIloHMBedr5cqA88+q2Bc=
+github.com/gethugothemes/hugo-modules/seo-tools/basic-seo v0.0.0-20241203025515-30ad48e108af/go.mod h1:Q8dPgjamV7pxwKSQyWV21Xwh5CGi23/k+M8HPTphYbs=
 github.com/gohugoio/hugo-mod-bootstrap-scss/v5 v5.20300.20200 h1:SmpwwN3DNzJWbV+IT8gaFu07ENUFpCvKou5BHYUKuVs=
 github.com/gohugoio/hugo-mod-bootstrap-scss/v5 v5.20300.20200/go.mod h1:kx8MBj9T7SFR8ZClWvKZPmmUxBaltkoXvnWlZZcSnYA=
 github.com/gohugoio/hugo-mod-jslibs-dist/popperjs/v2 v2.21100.20000 h1:GZxx4Hc+yb0/t3/rau1j8XlAxLE4CyXns2fqQbyqWfs=
 github.com/gohugoio/hugo-mod-jslibs-dist/popperjs/v2 v2.21100.20000/go.mod h1:mFberT6ZtcchrsDtfvJM7aAH2bDKLdOnruUHl0hlapI=
-github.com/twbs/bootstrap v5.3.2+incompatible/go.mod h1:fZTSrkpSf0/HkL0IIJzvVspTt1r9zuf7XlZau8kpcY0=
 github.com/twbs/bootstrap v5.3.3+incompatible h1:goFoqinzdHfkeegpFP7pvhbd0g+A3O2hbU3XCjuNrEQ=
 github.com/twbs/bootstrap v5.3.3+incompatible/go.mod h1:fZTSrkpSf0/HkL0IIJzvVspTt1r9zuf7XlZau8kpcY0=

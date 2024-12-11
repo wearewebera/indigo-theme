@@ -2,6 +2,7 @@
   "name": "indigo-theme",
   "version": "1.0.0",
   "scripts": {
+    "update-modules": "hugo mod clean --all && hugo mod get -u ./... && hugo mod tidy"
   },
   "devDependencies": {
     "prettier": "^3.3.3",
