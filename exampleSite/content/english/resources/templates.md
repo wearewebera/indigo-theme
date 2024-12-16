@@ -52,4 +52,4 @@ aligned, promote effective communication, and elevate your project management.
 {{< / article >}}
 {{< / section >}}
 
-{{< cta-1 context="notion-store" id="notion-store" bg-color="primary" btn-color="secondary" dark="true" >}}
+{{< cta-1 context="notion-store" id="notion-store" bg-color="primary" btn-color="secondary" dark="true" / >}}

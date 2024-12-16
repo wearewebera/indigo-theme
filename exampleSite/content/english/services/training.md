@@ -38,8 +38,8 @@ notion-for-teams:
 
 {{< hero-2 context="hero" id="training-hero" >}}
 
-{{< cta-1 context="notion-101" id="notion-101" btn-color="primary" >}}
+{{< cta-1 context="notion-101" id="notion-101" btn-color="primary" / >}}
 
-{{< cta-1 context="notion-techniques" id="notion-techniques" bg-color="primary" btn-color="secondary" dark="true" reverse="true" >}}
+{{< cta-1 context="notion-techniques" id="notion-techniques" bg-color="primary" btn-color="secondary" dark="true" reverse="true" / >}}
 
-{{< cta-1 context="notion-for-teams" id="notion-for-teams" bg-color="light" btn-color="primary" >}}
+{{< cta-1 context="notion-for-teams" id="notion-for-teams" bg-color="light" btn-color="primary" / >}}

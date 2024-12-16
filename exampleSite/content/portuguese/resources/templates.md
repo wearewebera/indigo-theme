@@ -52,4 +52,4 @@ Mantenha sua equipe alinhada, promova comunicação eficaz e eleve o gerenciamen
 {{< / article >}}
 {{< / section >}}
 
-{{< cta-1 context="notion-store" id="notion-store" bg-color="primary" btn-color="secondary" dark="true" >}}
+{{< cta-1 context="notion-store" id="notion-store" bg-color="primary" btn-color="secondary" dark="true" / >}}

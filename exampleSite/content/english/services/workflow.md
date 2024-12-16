@@ -38,8 +38,8 @@ transition-support:
 
 {{< hero-2 context="hero" id="workflow-hero" >}}
 
-{{< cta-1 context="custom-workflow" id="custom-workflow" bg-color="light" btn-color="secondary" >}}
+{{< cta-1 context="custom-workflow" id="custom-workflow" bg-color="light" btn-color="secondary" / >}}
 
-{{< cta-1 context="remote-work" id="remote-work" btn-color="primary" reverse="true" >}}
+{{< cta-1 context="remote-work" id="remote-work" btn-color="primary" reverse="true" / >}}
 
-{{< cta-1 context="transition-support" id="transition-support" bg-color="primary" dark="true" btn-color="secondary" >}}
+{{< cta-1 context="transition-support" id="transition-support" bg-color="primary" dark="true" btn-color="secondary" / >}}

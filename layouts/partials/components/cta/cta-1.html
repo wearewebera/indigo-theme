@@ -13,17 +13,19 @@
           {{ $image := resources.Get .Image }}
           {{ $size := printf "%dx%d" $image.Width $image.Height }}
           {{ $image := $image.Resize (printf "%s webp q80" $size) }}
-          {{ partial "image" (dict "Src" ($image | relURL) "alt" .Title "Size" $size "Command" "Fit") }}
+          {{ partial "image" (dict "Src" ($image | relURL) "alt" .Title "Size" $size "Command" "Fit" "Class" "cta-1-image") }}
       </div>
       <div class="col-12 col-lg-6">
         <h2 class="mb-4 {{ if $isDark }}text-white{{ end }}">
           <span class="{{ if $isDark }}text-light{{ else }}text-dark{{ end }}">{{ .Title | safeHTML }}</span>
         </h2>
         <p class="{{ if $isDark }}text-light{{ else }}text-muted{{ end }}">{{ .Content | markdownify }}</p>
-          {{ if .Button }}
-              {{ with .Button }}
-                <a href="{{ .Link }}" title="{{ .Label }}" class="btn btn-{{ .Color }} btn-{{ .Size }} mt-4">{{ .Label }}</a>
-              {{ end }}
+          {{ with .Button }}
+            <a href="{{ .Link }}" title="{{ .Label }}"
+               class="btn btn-{{ .Color }} btn-{{ .Size }} mt-4">{{ .Label }}</a>
+          {{ end }}
+          {{ with .Inner }}
+              {{ . }}
           {{ end }}
       </div>
     </div>
