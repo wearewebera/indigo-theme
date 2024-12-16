@@ -24,6 +24,9 @@ fonts = ["Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900"]
 enable = true
 expire_days = 30
 
+[swiper]
+enable = true
+
 [google_tag_manager]
 enable = true
 id = "GTM-5ZSTTTZM"

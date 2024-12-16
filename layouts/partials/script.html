@@ -5,13 +5,21 @@
 
 {{ with site.Params.cookies }}
     {{ if .enable }}
-        {{ with resources.Get "js/cookie.js" }}
+        {{ with (resources.Get "js/cookie.js") | resources.Minify }}
           <script src="{{ .RelPermalink }}" defer></script>
         {{ end }}
     {{ end }}
 {{ end }}
 
-{{ with resources.Get "js/main.js" }}
+{{ with site.Params.swiper }}
+    {{ if .enable }}
+        {{ with (resources.Get "js/swiper.js") | resources.Minify }}
+          <script src="{{ .RelPermalink }}" defer></script>
+        {{ end }}
+    {{ end }}
+{{ end }}
+
+{{ with (resources.Get "js/main.js") | resources.Minify }}
   <script src="{{ .RelPermalink }}" defer></script>
 {{ end }}
 

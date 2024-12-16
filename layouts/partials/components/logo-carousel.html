@@ -1,0 +1,44 @@
+<div class="swiper swiper-{{ .Id }}" id="{{ .Id }}">
+  <div class="swiper-wrapper align-items-center">
+      {{ range $index, $item := .Items }}
+        <div class="swiper-slide text-center">
+            {{ $image := resources.Get $item.image }}
+            {{ $size := printf "%dx%d" $image.Width $image.Height }}
+            {{ $image := $image.Resize (printf "%s webp q80" $size) }}
+            {{ $class := "img-fluid" }}
+            {{ with $item.class }}
+              {{ $class = $class | printf "%s %s" . }}
+            {{ end }}
+            {{ partial "image" (dict "Src" ($image | relURL) "alt" $item.alt "Size" $size "Command" "Fit" "Class" $class) }}
+        </div>
+      {{ end }}
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    new Swiper('.swiper-{{ .Id }}', {
+      centerInsufficientSlides: true,
+      spaceBetween: 48,
+      speed: 1000,
+      loop: true,
+      autoplay: {
+        delay: 2000,
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 2,
+        },
+        640: {
+          slidesPerView: 3,
+        },
+        767: {
+          slidesPerView: 4,
+        },
+        991: {
+          slidesPerView: 5,
+        },
+      },
+    });
+  });
+</script>
