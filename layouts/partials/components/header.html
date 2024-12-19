@@ -9,31 +9,32 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-4">
-            {{ range site.Menus.main }}
-                {{ if .HasChildren }}
+        {{- $menuPosition := site.Params.style.header_menu -}}
+        <ul class="navbar-nav py-4 py-lg-0 gap-lg-4{{ if eq $menuPosition "end" }} ms-auto{{ else if eq $menuPosition "start" }} me-auto{{ else }} mx-auto{{ end }}">
+            {{- range site.Menus.main -}}
+                {{- if .HasChildren -}}
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" role="button" aria-expanded="false">
-                        {{ .Name }}
+                        {{- .Name -}}
                     </a>
                     <ul class="dropdown-menu shadow-sm">
                         {{- range .Children -}}
-                          <li><a class="dropdown-item" href="{{ .URL | relLangURL }}">{{ .Name }}</a></li>
+                          <li><a class="dropdown-item" href="{{- .URL | relLangURL -}}">{{- .Name -}}</a></li>
                         {{- end -}}
                     </ul>
                   </li>
-                {{ else }}
+                {{- else -}}
                   <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="{{ .URL | relLangURL }}">{{ .Name }}</a>
+                    <a class="nav-link" aria-current="page" href="{{- .URL | relLangURL -}}">{{- .Name -}}</a>
                   </li>
-                {{ end }}
-            {{ end }}
+                {{- end -}}
+            {{- end -}}
         </ul>
-        <div class="d-flex flex-column gap-2 align-items-lg-center flex-lg-row">
-            {{ if templates.Exists ("partials/components/header/right.html") }}
-                {{ partial "partials/components/header/right.html" . }}
+        <div class="right-slot d-inline-flex flex-column gap-2 align-items-lg-center flex-lg-row{{ if eq $menuPosition "end" }} ms-lg-4{{ end }}">
+            {{- if templates.Exists ("partials/components/header/right.html") -}}
+                {{- partial "partials/components/header/right.html" . -}}
             {{ end }}
-            {{ partial "partials/components/language-selector.html" }}
+            {{- partial "partials/components/language-selector.html" -}}
         </div>
       </div>
     </div>

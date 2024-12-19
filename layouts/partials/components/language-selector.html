@@ -1,5 +1,5 @@
-{{ $siteLanguages := site.Languages }}
-{{ if gt (len $siteLanguages) 1 }}
+{{- $siteLanguages := site.Languages -}}
+{{- if gt (len $siteLanguages) 1 -}}
   <select class="language-selector border-0 px-2 py-1" onchange="location = this.value;">
       {{ $pageLang := page.Lang }}
       {{ range page.AllTranslations }}
@@ -19,4 +19,4 @@
           {{ end }}
       {{ end }}
   </select>
-{{ end }}
+{{- end -}}

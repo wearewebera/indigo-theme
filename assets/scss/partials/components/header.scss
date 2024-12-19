@@ -24,4 +24,8 @@ header {
     display: block;
     margin-bottom: 0;
   }
+
+  .right-slot:empty {
+    display: none !important;
+  }
 }

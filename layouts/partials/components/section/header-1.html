@@ -3,10 +3,10 @@
     {{ $isDark = true }}
 {{ end }}
 <div class="section-header-1 container mb-6 text-center">
-  <h2 class="mb-2 fw-semibold{{ if $isDark }} text-white{{ end }}">
+  <h2 class="mb-2 fw-semibold text-center{{ if $isDark }} text-white{{ end }}">
       {{ .Title | safeHTML }}
   </h2>
     {{ if .Subtitle }}
-      <p class="mx-auto{{ if $isDark }} text-light{{ end }}">{{ .Subtitle | safeHTML }}</p>
+      <p class="mx-auto text-center{{ if $isDark }} text-light{{ end }}">{{ .Subtitle | safeHTML }}</p>
     {{ end }}
 </div>
