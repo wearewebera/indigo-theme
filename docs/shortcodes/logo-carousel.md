@@ -12,6 +12,7 @@ logos.
     - **`Items`**: A list of images with the following fields:
         - **`image`**: The path to the logo image.
         - **`alt`**: Alternative text for the image (for accessibility and SEO).
+        - **`url`** (optional): The URL to make the logo clickable. If present, the logo will be wrapped in a link.
         - **`class`** (optional): Additional CSS classes to customize the image styling.
 - **`id`** (required): A unique identifier for the carousel instance.
 
@@ -26,12 +27,15 @@ logos:
   Items:
     - image: "img/logos/company1.png"
       alt: "Company 1"
+      url: "https://company1.com"
     - image: "img/logos/company2.png"
       alt: "Company 2"
+      url: "https://company2.com"
     - image: "img/logos/company3.png"
       alt: "Company 3"
     - image: "img/logos/company4.png"
       alt: "Company 4"
+      url: "https://company4.com"
     - image: "img/logos/company5.png"
       alt: "Company 5"
 ```
@@ -84,6 +88,7 @@ your-site/
     - **3 logos** per view on screens wider than **640px**.
     - **4 logos** per view on screens wider than **767px**.
     - **5 logos** per view on screens wider than **991px**.
+- **Clickable Logos**: If a `url` is provided, the logo becomes a clickable link.
 - **Customization**: Use the `class` field in each item to add custom CSS classes to images.
 
 ---

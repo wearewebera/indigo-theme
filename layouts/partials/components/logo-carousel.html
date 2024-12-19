@@ -7,38 +7,44 @@
             {{ $image := $image.Resize (printf "%s webp q80" $size) }}
             {{ $class := "img-fluid" }}
             {{ with $item.class }}
-              {{ $class = $class | printf "%s %s" . }}
+                {{ $class = $class | printf "%s %s" . }}
             {{ end }}
-            {{ partial "image" (dict "Src" ($image | relURL) "alt" $item.alt "Size" $size "Command" "Fit" "Class" $class) }}
+            {{ if $item.url }}
+              <a href="{{ $item.url }}" title="{{ $item.alt }}">
+                  {{ partial "image" (dict "Src" ($image | relURL) "alt" $item.alt "Size" $size "Command" "Fit" "Class" $class) }}
+              </a>
+            {{ else }}
+                {{ partial "image" (dict "Src" ($image | relURL) "alt" $item.alt "Size" $size "Command" "Fit" "Class" $class) }}
+            {{ end }}
         </div>
       {{ end }}
   </div>
 </div>
 
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener("DOMContentLoaded", () => {
     new Swiper('.swiper-{{ .Id }}', {
       centerInsufficientSlides: true,
       spaceBetween: 48,
       speed: 1000,
       loop: true,
       autoplay: {
-        delay: 2000,
+        delay: 2000
       },
       breakpoints: {
         0: {
-          slidesPerView: 2,
+          slidesPerView: 2
         },
         640: {
-          slidesPerView: 3,
+          slidesPerView: 3
         },
         767: {
-          slidesPerView: 4,
+          slidesPerView: 4
         },
         991: {
-          slidesPerView: 5,
-        },
-      },
+          slidesPerView: 5
+        }
+      }
     });
   });
 </script>
