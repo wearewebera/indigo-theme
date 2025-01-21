@@ -9,7 +9,7 @@
         <h1 class="display-4 fw-semibold mb-4">{{ .Title | safeHTML }}</h1>
         <p class="mb-4">{{ .Subtitle | safeHTML }}</p>
           {{ with .Button }}
-            <a href="{{ .Link }}" title="{{ .Label }}" class="btn btn-light btn-lg">{{ .Label }}</a>
+            <a href="{{ .Link }}" title="{{ .Label }}" class="btn btn-{{ .Color }} btn-{{ .Size }}">{{ .Label }}</a>
           {{ end }}
       </div>
     </div>

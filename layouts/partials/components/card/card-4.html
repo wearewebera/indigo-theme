@@ -1,0 +1,25 @@
+<div class="card-4 container">
+  <div class="row g-4">
+      {{ range $index, $item := .Items }}
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="bg-white p-4 h-100">
+            <div class="mb-4">
+              <div class="icon-wrapper text-bg-primary d-inline-flex align-items-center justify-content-center p-2 rounded-3">
+                  {{ if $item.icon }}
+                    <i class="icon {{ $item.icon }}"></i>
+                  {{ end }}
+                  {{ if $item.image }}
+                      {{ $image := resources.Get $item.image }}
+                      {{ $size := printf "%dx%d" $image.Width $image.Height }}
+                      {{ $image := $image.Resize (printf "%s webp q100" $size) }}
+                      {{ partial "image" (dict "Src" ($image | relURL) "alt" $item.title "Size" $size "Class" "image") }}
+                  {{ end }}
+              </div>
+            </div>
+            <div class="h5 mb-3">{{ $item.title | safeHTML }}</div>
+            <p class="text-muted">{{ $item.content | safeHTML }}</p>
+          </div>
+        </div>
+      {{ end }}
+  </div>
+</div>

@@ -1,6 +1,14 @@
 <div class="contact-form container">
   <div class="row h-100 g-5">
     <div class="col-12 col-lg-6">
+      <div class="d-lg-none">
+        <h2 class="mb-2 fw-semibold text-center">
+            {{ .Title }}
+        </h2>
+        <p class="mx-auto text-center">
+            {{ .Content }}
+        </p>
+      </div>
         {{ $params := dict
                 "Context" .
                 "Classes" .Classes

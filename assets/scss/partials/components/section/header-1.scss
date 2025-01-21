@@ -1,4 +1,6 @@
 .section-header-1 {
+  margin-bottom: 4.5rem;
+
   p {
     @include media-breakpoint-up(lg) {
       max-width: 50%;

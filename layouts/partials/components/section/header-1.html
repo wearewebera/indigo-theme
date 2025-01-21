@@ -2,11 +2,17 @@
 {{ if eq .Dark "true" }}
     {{ $isDark = true }}
 {{ end }}
-<div class="section-header-1 container mb-6 text-center">
-  <h2 class="mb-2 fw-semibold text-center{{ if $isDark }} text-white{{ end }}">
+
+{{ $textAlign := "center" }}
+{{ with .TextAlign }}
+    {{ $textAlign = . }}
+{{ end }}
+
+<div class="section-header-1 container {{ .Class }}">
+  <h2 class="mb-2 fw-semibold text-{{ $textAlign }}{{ if $isDark }} text-white{{ end }}">
       {{ .Title | safeHTML }}
   </h2>
     {{ if .Subtitle }}
-      <p class="mx-auto text-center{{ if $isDark }} text-light{{ end }}">{{ .Subtitle | safeHTML }}</p>
+      <p class="{{ if eq $textAlign "center"}}mx-auto {{ end }}{{ if eq $textAlign "end"}}ms-auto {{ end }}text-{{ $textAlign }}{{ if $isDark }} text-light{{ end }}">{{ .Subtitle | safeHTML }}</p>
     {{ end }}
 </div>

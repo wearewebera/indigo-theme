@@ -1,17 +1,22 @@
-{{ $button := dict
-        "Button" .
-        "Link" (index $.Page.Params (.Get "context") "Button" "Link")
-        "Label" (index $.Page.Params (.Get "context") "Button" "Label")
-        "Color" (.Get "btn-color")
-        "Size" "md"
-}}
+{{ $context := .Get "context" }}
+{{ $btnColor := .Get "btn-color" }}
+{{ $button := "" }}
+{{ with (index $.Page.Params $context "Button") }}
+    {{ $button = dict
+      "Button" .
+      "Link" (index $.Page.Params $context "Button" "Link")
+      "Label" (index $.Page.Params $context "Button" "Label")
+      "Color" $btnColor
+      "Size" "md"
+    }}
+{{ end }}
 {{ $params := dict
         "Context" .
         "Id" (.Get "id")
         "Classes" (.Get "class")
         "Title" (index $.Page.Params (.Get "context") "Title")
         "Content" (index $.Page.Params (.Get "context") "Content")
-        "Image" ((index $.Page.Params (.Get "context") "Image"))
+        "Image" (index $.Page.Params (.Get "context") "Image")
         "BgColor" (.Get "bg-color")
         "Dark" (.Get "dark")
         "Reverse" (.Get "reverse")
