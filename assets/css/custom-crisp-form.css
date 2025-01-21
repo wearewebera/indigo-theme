@@ -1,6 +1,6 @@
 :root {
     --color-blue: {{ site.Params.style.primary_color }};
-    --color-blue-light: {{ site.Params.style.secondary_color }};
+    --color-blue-light: {{ site.Params.style.primary_color }};
 }
 
 html, body {
@@ -38,4 +38,6 @@ body {
     border-radius: 0.5rem;
 }
 
-
+.button:hover {
+    opacity: 0.8 !important;
+}
