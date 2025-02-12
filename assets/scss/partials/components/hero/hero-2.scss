@@ -15,7 +15,7 @@
     right: 0;
     bottom: 0;
     background-color: $primary;
-    opacity: 0.8;
+    opacity: var(--overlay-opacity, 0.8);
   }
 
   * {

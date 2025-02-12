@@ -2,7 +2,12 @@
 {{ $size := printf "%dx%d" $image.Width $image.Height }}
 {{ $image := $image.Resize (printf "%s webp q80" $size) }}
 
-<section id="{{ .Id }}" class="hero-2 text-bg-primary {{ .Classes }}" style="--hero-bg: url('{{ $image.RelPermalink }}')">
+{{ $showOverlay := true }}
+{{ if eq .Overlay "false" }}
+    {{ $showOverlay = false }}
+{{ end }}
+
+<section id="{{ .Id }}" class="hero-2 text-bg-primary {{ .Classes }}" style="--hero-bg: url('{{ $image.RelPermalink }}'); --overlay-opacity: {{ if $showOverlay }}0.8{{ else }}0{{ end }}">
   <div class="container">
     <div class="row align-items-center">
       <div class="col-12 col-md-8 col-lg-6">

@@ -15,6 +15,7 @@
         "Title" (index $.Page.Params (.Get "context") "Title")
         "Subtitle" (index $.Page.Params (.Get "context") "Subtitle")
         "Image" (index $.Page.Params (.Get "context") "Image")
+        "Overlay" (.Get "overlay")
         "Button" $button
 }}
 {{ partial "partials/components/hero/hero-2.html" $params }}
