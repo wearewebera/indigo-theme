@@ -8,13 +8,7 @@
 {{ end }}
 <section id="{{ .Id }}" class="cta-1 py-7 bg-{{ .BgColor }} {{ .Classes }}">
   <div class="container">
-    <div class="row g-5 align-items-center {{ if $isReverse }} flex-row-reverse{{ end }}">
-      <div class="col-12 col-lg-6 text-center">
-          {{ $image := resources.Get .Image }}
-          {{ $size := printf "%dx%d" $image.Width $image.Height }}
-          {{ $image := $image.Resize (printf "%s webp q80" $size) }}
-          {{ partial "image" (dict "Src" ($image | relURL) "alt" .Title "Size" $size "Command" "Fit" "Class" "cta-1-image") }}
-      </div>
+    <div class="row g-5 align-items-center ">
       <div class="col-12 col-lg-6">
         <h2 class="mb-4 {{ if $isDark }}text-white{{ end }}">
           <span class="{{ if $isDark }}text-light{{ else }}text-dark{{ end }}">{{ .Title | safeHTML }}</span>
@@ -27,6 +21,12 @@
           {{ with .Inner }}
               {{ . }}
           {{ end }}
+      </div>
+      <div class="col-12 col-lg-6 text-center {{ if $isReverse }} order-lg-last{{ end }}">
+          {{ $image := resources.Get .Image }}
+          {{ $size := printf "%dx%d" $image.Width $image.Height }}
+          {{ $image := $image.Resize (printf "%s webp q80" $size) }}
+          {{ partial "image" (dict "Src" ($image | relURL) "alt" .Title "Size" $size "Command" "Fit" "Class" "cta-1-image") }}
       </div>
     </div>
   </div>
