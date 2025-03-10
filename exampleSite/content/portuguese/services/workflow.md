@@ -36,7 +36,7 @@ transition-support:
     link: "/#pricing-list"
 ---
 
-{{< hero-2 context="hero" id="workflow-hero" >}}
+{{< hero-2 context="hero" id="workflow-hero" btn-color="light" >}}
 
 {{< cta-1 context="custom-workflow" id="custom-workflow" bg-color="light" btn-color="secondary" / >}}
 

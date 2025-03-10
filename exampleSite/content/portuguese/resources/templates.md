@@ -20,7 +20,7 @@ notion-store:
     link: "https://avantistudio.gumroad.com/"
 ---
 
-{{< hero-2 context="hero" id="templates-hero" >}}
+{{< hero-2 context="hero" id="templates-hero" btn-color="light" >}}
 
 {{< section id="templates" >}}
 {{< article >}}

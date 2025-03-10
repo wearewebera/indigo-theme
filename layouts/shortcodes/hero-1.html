@@ -1,10 +1,13 @@
-{{ $button := dict
-        "Button" .
-        "Link" (index $.Page.Params (.Get "context") "Button" "Link")
-        "Label" (index $.Page.Params (.Get "context") "Button" "Label")
-        "Color" (.Get "btn-color")
-        "Size" "lg"
-}}
+{{ $button := "" }}
+{{ with (index $.Page.Params (.Get "context") "Button") }}
+    {{ $button := dict
+            "Button" .
+            "Link" (index . "Link")
+            "Label" (index . "Label")
+            "Color" ($.Get "btn-color")
+            "Size" "lg"
+    }}
+{{ end }}
 {{ $params := dict
         "Context" .
         "Id" (.Get "id")

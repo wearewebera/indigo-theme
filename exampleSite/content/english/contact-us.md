@@ -14,7 +14,7 @@ form:
   icon: "fa-solid fa-address-book"
 ---
 
-{{< hero-2 context="hero" id="contact-us-hero" >}}
+{{< hero-2 context="hero" id="contact-us-hero" btn-color="light" >}}
 
 {{< section id="contact-us" >}}
 {{< contact-form context="form" >}}
