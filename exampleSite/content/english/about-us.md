@@ -48,7 +48,7 @@ values:
 
 ---
 
-{{< hero-2 context="hero" id="about-us-hero" >}}
+{{< hero-2 context="hero" id="about-us-hero" btn-color="light" >}}
 
 {{< section id="identity" >}}
 {{< card-2 context="identity" >}}

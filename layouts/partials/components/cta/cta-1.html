@@ -6,14 +6,14 @@
 {{ if eq .Reverse "true" }}
     {{ $isReverse = true }}
 {{ end }}
-<section id="{{ .Id }}" class="cta-1 py-7 bg-{{ .BgColor }} {{ .Classes }}">
+<section id="{{ .Id }}" class="cta-1 bg-{{ .BgColor }} {{ .Classes }}">
   <div class="container">
     <div class="row g-5 align-items-center ">
       <div class="col-12 col-lg-6">
-        <h2 class="mb-4 {{ if $isDark }}text-white{{ end }}">
+        <h2 class="h1 mb-4 {{ if $isDark }}text-white{{ end }}">
           <span class="{{ if $isDark }}text-light{{ else }}text-dark{{ end }}">{{ .Title | safeHTML }}</span>
         </h2>
-        <p class="{{ if $isDark }}text-light{{ else }}text-muted{{ end }}">{{ .Content | markdownify }}</p>
+        <p class="fs-5 {{ if $isDark }}text-light{{ else }}text-muted{{ end }}">{{ .Content | markdownify }}</p>
           {{ with .Button }}
             <a href="{{ .Link }}" title="{{ .Label }}"
                class="btn btn-{{ .Color }} btn-{{ .Size }} mt-4">{{ .Label }}</a>
@@ -22,7 +22,7 @@
               {{ . }}
           {{ end }}
       </div>
-      <div class="col-12 col-lg-6 text-center {{ if $isReverse }} order-lg-last{{ end }}">
+      <div class="col-12 col-lg-6 text-center {{ if ne $isReverse true }} order-lg-first{{ end }}">
           {{ $image := resources.Get .Image }}
           {{ $size := printf "%dx%d" $image.Width $image.Height }}
           {{ $image := $image.Resize (printf "%s webp q80" $size) }}

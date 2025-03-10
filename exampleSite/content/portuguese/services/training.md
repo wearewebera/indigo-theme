@@ -36,7 +36,7 @@ notion-for-teams:
     link: "/#pricing-list"
 ---
 
-{{< hero-2 context="hero" id="training-hero" >}}
+{{< hero-2 context="hero" id="training-hero" btn-color="light" >}}
 
 {{< cta-1 context="notion-101" id="notion-101" btn-color="primary" / >}}
 
