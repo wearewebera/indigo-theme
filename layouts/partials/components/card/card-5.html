@@ -1,0 +1,27 @@
+{{ $isDark := false }}
+{{ if eq .Dark "true" }}
+    {{ $isDark = true }}
+{{ end }}
+
+{{ $shadow := true }}
+{{ if eq .Shadow "false" }}
+    {{ $shadow = false }}
+{{ end }}
+
+{{ $bgColor := .BgColor }}
+{{ $cardSize := .CardSize }}
+
+{{ $items := .Items }}
+<div class="card-5 {{ .Classes }}" style="{{ if $cardSize }}--card-5-size: {{ $cardSize }}{{ end }}">
+    {{ range $index, $item := $items }}
+      <div class="d-flex gap-3 align-items-center p-3 rounded-3 h-100 {{ if $bgColor }}bg-{{ $bgColor }}{{ end }} {{ if $shadow }}shadow{{ end }}">
+        <div class="flex-1">
+            {{ $image := resources.Get $item.image }}
+            {{ $size := printf "%dx%d" $image.Width $image.Height }}
+            {{ $image := $image.Resize (printf "%s webp q100" $size) }}
+            {{ partial "image" (dict "Src" ($image | relURL) "alt" $item.title "Size" $size) }}
+        </div>
+        <p class="m-0 {{ if $isDark }}text-light{{ else }}text-muted{{ end }}">{{ $item.title }}</p>
+      </div>
+    {{ end }}
+</div>

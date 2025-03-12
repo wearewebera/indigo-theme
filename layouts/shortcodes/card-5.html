@@ -1,0 +1,10 @@
+{{ $params := dict
+        "Context" .
+        "BgColor" (.Get "bg-color")
+        "Dark" (.Get "dark")
+        "Shadow" (.Get "shadow")
+        "CardSize" (.Get "card-size")
+        "Classes" (.Get "class")
+        "Items" (index $.Page.Params (.Get "context") "Items")
+}}
+{{ partial "partials/components/card/card-5.html" $params }}
