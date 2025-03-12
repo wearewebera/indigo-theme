@@ -1,0 +1,7 @@
+{{ $params := dict
+        "Context" .
+        "Dark" (.Get "dark")
+        "Classes" (.Get "class")
+        "Items" (index $.Page.Params (.Get "context") "Items")
+}}
+{{ partial "partials/components/list/list-1.html" $params }}
