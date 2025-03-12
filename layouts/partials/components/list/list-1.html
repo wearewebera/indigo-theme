@@ -1,0 +1,15 @@
+{{ $isDark := false }}
+{{ if eq .Dark "true" }}
+    {{ $isDark = true }}
+{{ end }}
+
+{{ $items := .Items }}
+<ul class="list-unstyled mb-0 {{ if $isDark }}text-light{{ end }} {{ .Classes }}">
+    {{ range $index, $item := $items }}
+      <li class="d-flex align-items-center gap-2 mb-3">
+          {{ $image := resources.Get $item.image }}
+        <img src="{{ $image.Permalink }}" alt="Icon">
+        <span>{{ $item.content | safeHTML }}</span>
+      </li>
+    {{ end }}
+</ul>
