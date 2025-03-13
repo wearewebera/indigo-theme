@@ -1,0 +1,16 @@
+baseURL = "https://dev.example.com"
+disableKinds = ["taxonomy", "term"]
+languageCode = "en-us"
+title = "Indigo Theme"
+theme = "github.com/wearewebera/indigo-theme"
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[markup.goldmark.parser]
+attribute = true
+
+[pagination]
+disableAliases = false
+pagerSize = 6
+path = 'page'

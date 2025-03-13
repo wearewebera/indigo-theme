@@ -1,6 +1,6 @@
 {{ $button := "" }}
 {{ with (index $.Page.Params (.Get "context") "Button") }}
-    {{ $button := dict
+    {{ $button = dict
             "Button" .
             "Link" (index . "Link")
             "Label" (index . "Label")
