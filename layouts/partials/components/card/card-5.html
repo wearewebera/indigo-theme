@@ -8,13 +8,18 @@
     {{ $shadow = false }}
 {{ end }}
 
+{{ $inline := true }}
+{{ if eq .Inline "false" }}
+    {{ $inline = false }}
+{{ end }}
+
 {{ $bgColor := .BgColor }}
 {{ $cardSize := .CardSize }}
 
 {{ $items := .Items }}
 <div class="card-5 {{ .Classes }}" style="{{ if $cardSize }}--card-5-size: {{ $cardSize }}{{ end }}">
     {{ range $index, $item := $items }}
-      <div class="d-flex gap-3 align-items-center p-3 rounded-3 h-100 {{ if $bgColor }}bg-{{ $bgColor }}{{ end }} {{ if $shadow }}shadow{{ end }}">
+      <div class="d-flex gap-3 p-3 rounded-3 h-100 {{ if $inline }}flex-row align-items-center{{ else }}flex-column{{ end }} {{ if $bgColor }}bg-{{ $bgColor }}{{ end }} {{ if $shadow }}shadow{{ end }}">
         <div class="flex-1">
             {{ $image := resources.Get $item.image }}
             {{ $size := printf "%dx%d" $image.Width $image.Height }}
