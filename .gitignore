@@ -1,5 +1,7 @@
 .idea
 /exampleSite/public
 /exampleSite/resources
+/docsSite/public
+/docsSite/resources
 node_modules
 *jsconfig.json

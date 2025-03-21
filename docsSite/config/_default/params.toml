@@ -1,0 +1,41 @@
+logo = "img/logo.png"
+logo_width = "512px"
+logo_webp = true
+logo_text = "Indigo Theme"
+favicon = "img/favicon.png"
+
+customcss = ["css/custom.css"]
+customjs = ["js/custom.js"]
+
+[style]
+primary_color = '#1f316d'
+secondary_color = '#111111'
+font_family = 'Lato'
+header_menu = 'end'
+
+[metadata]
+author = "Webera"
+image = "img/og-image.png"
+
+[google_fonts]
+enable = true
+fonts = ["Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900"]
+
+[cookies]
+enable = true
+expire_days = 30
+
+[swiper]
+enable = false
+
+[google_tag_manager]
+enable = true
+id = ""
+
+[crisp_chat]
+enable = true
+id = ""
+
+[crisp_form]
+enable = true
+id = ""

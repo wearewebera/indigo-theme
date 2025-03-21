@@ -1,0 +1,22 @@
+.cta-2 {
+  position: relative;
+  background-image: var(--cta-2-bg);
+  background-size: cover;
+  background-position: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--cta-2-color, $primary);
+    opacity: var(--overlay-opacity, 0.8);
+  }
+
+  * {
+    z-index: 1;
+  }
+}

@@ -1,5 +1,4 @@
 {{ $image := "" }}
-
 {{ with .Image }}
     {{ $image = resources.Get . }}
     {{ $size := printf "%dx%d" $image.Width $image.Height }}
@@ -11,17 +10,12 @@
     {{ $showOverlay = false }}
 {{ end }}
 
-{{ $textFullWidth := false }}
-{{ if eq .TextFullWidth "true" }}
-    {{ $textFullWidth = true }}
-{{ end }}
-
-<section id="{{ .Id }}" class="hero-2 text-bg-primary {{ .Classes }}" style="{{ if $image }} --hero-bg: url('{{ $image.RelPermalink }}'); {{ end }} --overlay-opacity: {{ if $showOverlay }}0.8{{ else }}0{{ end }}">
+<section id="{{ .Id }}" class="cta-2 section text-bg-{{ .BgColor }} {{ .Classes }}" style="--cta-2-color: var(--bs-{{ .BgColor }}); {{ if $image }} --cta-2-bg: url('{{ $image.RelPermalink }}'); {{ end }} --overlay-opacity: {{ if $showOverlay }}0.8{{ else }}0{{ end }}">
   <div class="container">
     <div class="row align-items-center">
-      <div class="col-12 {{ if eq $textFullWidth false }}col-md-8 col-lg-6{{ end }}">
-        <h1 class="display-4 fw-semibold mb-4">{{ .Title | safeHTML }}</h1>
-        <p class="mb-4">{{ .Subtitle | safeHTML }}</p>
+      <div class="col-12 text-center">
+        <h2 class="h1 mb-4">{{ .Title | safeHTML }}</h2>
+        <p class="fs-5 {{ with .Button }}mb-4{{ else }}mb-0{{ end }}">{{ .Content | safeHTML }}</p>
           {{ with .Button }}
             <a href="{{ .Link }}" title="{{ .Label }}" class="btn btn-{{ .Color }} btn-{{ .Size }}">{{ .Label }}</a>
           {{ end }}

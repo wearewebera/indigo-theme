@@ -1,0 +1,52 @@
+[[main]]
+name = "Slides"
+hasChildren = true
+weight = 1
+
+[[main]]
+parent = "Slides"
+name = "Introduction"
+url = "/"
+weight = 1
+
+[[main]]
+parent = "Slides"
+name = "Objectives"
+url = "/slides/2"
+weight = 2
+
+[[main]]
+parent = "Slides"
+name = "Characteristics"
+url = "/slides/3"
+weight = 3
+
+[[main]]
+parent = "Slides"
+name = "Philosophy"
+url = "/slides/4"
+weight = 4
+
+[[main]]
+parent = "Slides"
+name = "Next Steps"
+url = "/slides/5"
+weight = 5
+
+[[main]]
+parent = "Slides"
+name = "Cases"
+url = "/slides/6"
+weight = 6
+
+[[main]]
+parent = "Slides"
+name = "Examples"
+url = "/slides/7"
+weight = 7
+
+[[main]]
+parent = "Slides"
+name = "Conclusion"
+url = "/slides/8"
+weight = 8
