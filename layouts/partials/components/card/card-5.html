@@ -26,7 +26,7 @@
             {{ $image := $image.Resize (printf "%s webp q100" $size) }}
             {{ partial "image" (dict "Src" ($image | relURL) "alt" $item.title "Size" $size) }}
         </div>
-        <p class="m-0 {{ if $isDark }}text-light{{ else }}text-muted{{ end }}">{{ $item.title }}</p>
+        <p class="m-0 {{ if $isDark }}text-light{{ else }}text-muted{{ end }}">{{ $item.title | safeHTML }}</p>
       </div>
     {{ end }}
 </div>
