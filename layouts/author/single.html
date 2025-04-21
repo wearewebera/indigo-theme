@@ -11,7 +11,7 @@
         {{ if isset .Params "social" }}
           <ul class="list-inline">
               {{ range .Params.Social }}
-                <li class="list-inline-item mb-0">
+                <li class="list-inline-item mb-0 fs-5">
                   <a href="{{ .link | safeURL }}" target="_blank">
                     <i class="{{ .icon }}"></i>
                   </a>
@@ -21,17 +21,19 @@
         {{ end }}
     </div>
   </section>
-  <section class="py-7">
-    <div class="container">
-      <h2 class="h3 mb-5">{{ i18n `latest_posts` }}</h2>
-        {{ $pages := where (where site.RegularPages "Params.author" .Title) "Section" "blog" }}
-      <div class="row g-5 gy-0">
-          {{ range first 6 $pages.ByDate.Reverse }}
-            <div class="col-12 col-lg-6">
-                {{ partial "components/post-summary" . }}
-            </div>
-          {{ end }}
-      </div>
-    </div>
-  </section>
+    {{ $pages := where (where site.RegularPages "Params.author" .Title) "Section" "blog" }}
+    {{ if gt (len $pages) 0 }}
+      <section class="py-7">
+        <div class="container">
+          <h2 class="h3 mb-5">{{ i18n `latest_posts` }}</h2>
+          <div class="row g-5 gy-0">
+              {{ range first 6 $pages.ByDate.Reverse }}
+                <div class="col-12 col-lg-6">
+                    {{ partial "components/post-summary" . }}
+                </div>
+              {{ end }}
+          </div>
+        </div>
+      </section>
+    {{ end }}
 {{ end }}
