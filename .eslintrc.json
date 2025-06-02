@@ -1,0 +1,30 @@
+{
+  "extends": "standard",
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "globals": {
+    "bootstrap": "readonly",
+    "Swiper": "readonly",
+    "$crisp": "writable",
+    "CRISP_WEBSITE_ID": "writable",
+    "dataLayer": "writable",
+    "IndigoTheme": "writable"
+  },
+  "rules": {
+    "space-before-function-paren": ["error", {
+      "anonymous": "always",
+      "named": "never",
+      "asyncArrow": "always"
+    }],
+    "no-new": "off"
+  },
+  "ignorePatterns": [
+    "node_modules/",
+    "exampleSite/public/",
+    "docsSite/public/",
+    "resources/",
+    "vendor/"
+  ]
+}

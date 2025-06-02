@@ -1,0 +1,43 @@
+// V2 Theme Variables
+// These variables are used throughout the v2 components
+// They reference CSS custom properties for runtime customization
+
+// Colors
+$primary: var(--indigo-primary);
+$secondary: var(--indigo-secondary);
+$success: var(--indigo-success);
+$info: var(--indigo-info);
+$warning: var(--indigo-warning);
+$danger: var(--indigo-danger);
+$light: var(--indigo-light);
+$dark: var(--indigo-dark);
+
+// Typography
+$font-family-base: var(--indigo-font-family);
+$font-size-base: var(--indigo-font-size-base);
+$line-height-base: var(--indigo-line-height-base);
+
+// Spacing
+$spacing-unit: var(--indigo-spacing-unit);
+$spacing-xs: var(--indigo-spacing-xs);
+$spacing-sm: var(--indigo-spacing-sm);
+$spacing-md: var(--indigo-spacing-md);
+$spacing-lg: var(--indigo-spacing-lg);
+$spacing-xl: var(--indigo-spacing-xl);
+
+// Components
+$border-radius: var(--indigo-border-radius);
+$border-radius-lg: var(--indigo-border-radius-lg);
+$border-radius-pill: var(--indigo-border-radius-pill);
+$box-shadow: var(--indigo-box-shadow);
+$box-shadow-lg: var(--indigo-box-shadow-lg);
+
+// Breakpoints (same as Bootstrap)
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);

@@ -1,0 +1,140 @@
+// V2 Card Component
+// Unified card component with variants
+
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+.card {
+  @include card-base;
+  
+  // Base card structure
+  &__header {
+    margin-bottom: var(--indigo-spacing-md);
+  }
+  
+  &__icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: var(--indigo-spacing-md);
+    @include flex-center;
+    
+    i {
+      font-size: 2rem;
+      color: var(--indigo-primary);
+    }
+    
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  
+  &__image {
+    margin: calc(var(--indigo-card-padding) * -1);
+    margin-bottom: var(--indigo-card-padding);
+    overflow: hidden;
+    border-radius: var(--indigo-card-border-radius) var(--indigo-card-border-radius) 0 0;
+    
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+  
+  &__title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: var(--indigo-spacing-sm);
+    color: var(--indigo-dark);
+  }
+  
+  &__description {
+    color: var(--bs-gray-600);
+    line-height: 1.6;
+    margin-bottom: var(--indigo-spacing-md);
+  }
+  
+  &__footer {
+    margin-top: auto;
+  }
+  
+  // Variants
+  &--centered {
+    text-align: center;
+    
+    .card__icon {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  
+  &--horizontal {
+    @include breakpoint(md) {
+      display: flex;
+      align-items: center;
+      
+      .card__image {
+        flex: 0 0 40%;
+        margin: calc(var(--indigo-card-padding) * -1);
+        border-radius: var(--indigo-card-border-radius) 0 0 var(--indigo-card-border-radius);
+      }
+      
+      .card__content {
+        flex: 1;
+        padding-left: var(--indigo-card-padding);
+      }
+    }
+  }
+  
+  &--clickable {
+    cursor: pointer;
+    
+    &:hover {
+      .card__title {
+        color: var(--indigo-primary);
+      }
+    }
+  }
+  
+  &--bordered {
+    box-shadow: none;
+    border: 1px solid var(--bs-gray-200);
+    
+    &:hover {
+      border-color: var(--indigo-primary);
+      transform: none;
+    }
+  }
+  
+  // Size modifiers
+  &--sm {
+    .card__icon {
+      width: 40px;
+      height: 40px;
+      
+      i {
+        font-size: 1.5rem;
+      }
+    }
+    
+    .card__title {
+      font-size: 1.125rem;
+    }
+  }
+  
+  &--lg {
+    .card__icon {
+      width: 80px;
+      height: 80px;
+      
+      i {
+        font-size: 3rem;
+      }
+    }
+    
+    .card__title {
+      font-size: 1.5rem;
+    }
+  }
+}

@@ -1,0 +1,78 @@
+// V2 Theme Mixins
+// Common mixins for v2 components
+
+// Responsive breakpoint mixin
+@mixin breakpoint($size) {
+  @if map-has-key($breakpoints, $size) {
+    @media (min-width: map-get($breakpoints, $size)) {
+      @content;
+    }
+  }
+}
+
+// Card base styles
+@mixin card-base {
+  background: white;
+  border-radius: var(--indigo-card-border-radius);
+  padding: var(--indigo-card-padding);
+  box-shadow: var(--indigo-box-shadow);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  
+  &:hover {
+    box-shadow: var(--indigo-box-shadow-lg);
+    transform: translateY(-2px);
+  }
+}
+
+// Button base styles
+@mixin button-base {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  border-radius: var(--indigo-button-border-radius);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  border: 2px solid transparent;
+}
+
+// Section spacing
+@mixin section-spacing {
+  padding: var(--indigo-spacing-xl) 0;
+  
+  @include breakpoint(md) {
+    padding: calc(var(--indigo-spacing-xl) * 1.5) 0;
+  }
+}
+
+// Flex center
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Text truncate
+@mixin text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Aspect ratio
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  
+  &::before {
+    content: "";
+    display: block;
+    padding-top: percentage($height / $width);
+  }
+  
+  > * {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}

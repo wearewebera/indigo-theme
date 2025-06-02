@@ -12,6 +12,9 @@ primary_color = '#21519f'
 secondary_color = '#f9bc56'
 font_family = 'Inter'
 
+[theme]
+# version = "v2" # Uncomment to enable v2 features (default: "legacy")
+
 [metadata]
 author = "Webera"
 image = "img/og-image.png"
