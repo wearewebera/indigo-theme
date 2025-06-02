@@ -13,6 +13,9 @@ secondary_color = '#111111'
 font_family = 'Lato'
 header_menu = 'end'
 
+[theme]
+# version = "v2" # Uncomment to enable v2 features (default: "legacy")
+
 [metadata]
 author = "Webera"
 image = "img/og-image.png"

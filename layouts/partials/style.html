@@ -14,18 +14,39 @@
 <link rel="preconnect" href="https://cdnjs.cloudflare.com">
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
+{{ $themeVersion := site.Params.theme.version | default "legacy" }}
+
 {{ $options := dict
         "targetPath" "css/style.css"
         "transpiler" "dartsass"
         "vars" site.Params.style
 }}
-{{ with (resources.Get "scss/style.scss" | toCSS $options) | resources.Minify }}
-  <link rel="stylesheet" type="text/css" href="{{ .RelPermalink }}">
+
+{{ if eq $themeVersion "v2" }}
+  {{/* V2 Theme Styles */}}
+  {{ with (resources.Get "scss/v2/main.scss" | toCSS $options) | resources.Minify }}
+    <link rel="stylesheet" type="text/css" href="{{ .RelPermalink }}">
+  {{ end }}
+  
+  {{/* Still load legacy bootstrap for backward compatibility */}}
+  {{ with (resources.Get "scss/bootstrap.scss" | toCSS $options) | resources.Minify }}
+    <link rel="stylesheet" type="text/css" href="{{ .RelPermalink }}">
+  {{ end }}
+{{ else }}
+  {{/* Legacy Theme Styles */}}
+  {{ with (resources.Get "scss/style.scss" | toCSS $options) | resources.Minify }}
+    <link rel="stylesheet" type="text/css" href="{{ .RelPermalink }}">
+  {{ end }}
 {{ end }}
 
-{{ $swiperCss := ((resources.Get "css/swiper.css") | resources.ExecuteAsTemplate "css/swiper.css" . | toCSS) | resources.Minify }}
-{{ with $swiperCss }}
-  <link rel="stylesheet" type="text/css" href="{{ .RelPermalink }}">
+{{/* Conditional Swiper CSS - only load if enabled and used */}}
+{{ if site.Params.swiper.enable }}
+  {{ if or (.HasShortcode "logo-carousel") (.HasShortcode "hero-2") }}
+    {{ $swiperCss := ((resources.Get "css/swiper.css") | resources.ExecuteAsTemplate "css/swiper.css" . | toCSS) | resources.Minify }}
+    {{ with $swiperCss }}
+      <link rel="stylesheet" type="text/css" href="{{ .RelPermalink }}">
+    {{ end }}
+  {{ end }}
 {{ end }}
 
 {{ if isset site.Params "customcss" }}
