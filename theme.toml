@@ -4,7 +4,7 @@ description = "Theme for the Webera ecosystem"
 homepage = "https://webera.com/"
 tags = ["blog", "company", "webera"]
 features = ["blog", "Responsive"]
-min_version = "0.41"
+min_version = "0.120"
 
 [author]
   name = "Webera"

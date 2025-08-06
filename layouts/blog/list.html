@@ -6,7 +6,7 @@
           {{ i18n `latest_post` }}
         </span>
       </div>
-        {{ range first 1 (where .Data.Pages "Params.featured" true).ByDate.Reverse }}
+        {{ range first 1 (where .RegularPages "Params.featured" true).ByDate.Reverse }}
           <article>
             <a href="{{ .Permalink }}">
               <div class="row justify-content-between mb-2">
@@ -54,7 +54,7 @@
   <section class="blog-posts py-7">
     <div class="container">
       <div class="row g-5 gy-0">
-          {{ $paginator := .Paginate .Data.Pages }}
+          {{ $paginator := .Paginate .RegularPages }}
           {{ range $paginator.Pages }}
             <div class="col-12 col-lg-6">
                 {{ partial "components/post-summary" . }}

@@ -8,9 +8,9 @@
         {{ end }}
       <h1 class="h3">{{ .Title }}</h1>
       <div class="text-muted">{{ .Content }}</div>
-        {{ if isset .Params "social" }}
+        {{ with .Params.social }}
           <ul class="list-inline">
-              {{ range .Params.Social }}
+              {{ range . }}
                 <li class="list-inline-item mb-0 fs-5">
                   <a href="{{ .link | safeURL }}" target="_blank">
                     <i class="{{ .icon }}"></i>

@@ -51,9 +51,9 @@
                     <a href="{{ .RelPermalink }}" class="fs-5 fw-semibold">{{ .Title }}</a>
                   </div>
                   <p class="text-muted">{{ .Summary }}</p>
-                    {{ if isset .Params "social" }}
+                    {{ with .Params.social }}
                       <ul class="list-inline m-0">
-                          {{ range .Params.social }}
+                          {{ range . }}
                             <li class="list-inline-item">
                               <a href="{{ .link | safeURL }}">
                                 <i class="{{ .icon }}"></i>

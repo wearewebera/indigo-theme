@@ -5,7 +5,7 @@ title = "My Website"
 theme = "github.com/wearewebera/indigo-theme"
 
 [markup.goldmark.renderer]
-unsafe = true
+# unsafe = true # Enable only if you need raw HTML in markdown
 
 [markup.goldmark.parser]
 attribute = true
