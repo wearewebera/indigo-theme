@@ -12,7 +12,7 @@
 
 <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
 <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha384-h/hnnw1Bi4nbpD6kE7wYmmsMbpzfIafUkAUthzMwEQvmlW2tSGlEVJXUVVgZPQoX" crossorigin="anonymous">
 
 {{ $options := dict
         "targetPath" "css/style.css"
@@ -28,8 +28,8 @@
   <link rel="stylesheet" type="text/css" href="{{ .RelPermalink }}">
 {{ end }}
 
-{{ if isset site.Params "customcss" }}
-    {{ range site.Params.customcss }}
+{{ with site.Params.customcss }}
+    {{ range . }}
         {{ $customstyle := resources.Get . | fingerprint }}
       <link rel="stylesheet" type="text/css" href="{{ $customstyle.RelPermalink }}">
     {{ end }}

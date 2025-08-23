@@ -19,13 +19,13 @@
                     </a>
                     <ul class="dropdown-menu shadow-sm">
                         {{- range .Children -}}
-                          <li><a class="dropdown-item" href="{{- .URL | relLangURL -}}">{{- .Name -}}</a></li>
+                          <li><a class="dropdown-item" href="{{- .ConfiguredURL | relLangURL -}}">{{- .Name -}}</a></li>
                         {{- end -}}
                     </ul>
                   </li>
                 {{- else -}}
                   <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="{{- .URL | relLangURL -}}">{{- .Name -}}</a>
+                    <a class="nav-link" aria-current="page" href="{{- .ConfiguredURL | relLangURL -}}">{{- .Name -}}</a>
                   </li>
                 {{- end -}}
             {{- end -}}

@@ -31,12 +31,12 @@
                       <ul {{ with .Params.columns }}style="columns: {{ . }};"{{ end }}>
                           {{ range .Children }}
                             <li class="mb-3">
-                                {{ $isExteral := .URL | strings.Contains "http" }}
-                                {{ $url := .URL | default "/" }}
+                                {{ $isExteral := .ConfiguredURL | strings.Contains "http" }}
+                                {{ $url := .ConfiguredURL | default "/" }}
                                 {{ if $isExteral }}
-                                    {{ $url = .URL }}
+                                    {{ $url = .ConfiguredURL }}
                                 {{ else }}
-                                    {{ $url = .URL | relLangURL }}
+                                    {{ $url = .ConfiguredURL | relLangURL }}
                                 {{ end }}
                               <a class="link-muted" href="{{ $url }}"
                                  target="{{ if $isExteral }}_blank{{ else }}_self{{ end }}">
@@ -64,12 +64,12 @@
           {{ if $menuItems }}
               {{ $lastIndex := sub (len $menuItems) 1 }}
               {{ range $index, $item := $menuItems }}
-                  {{ $isExternal := $item.URL | strings.Contains "http" }}
-                  {{ $url := $item.URL | default "/" }}
+                  {{ $isExternal := $item.ConfiguredURL | strings.Contains "http" }}
+                  {{ $url := $item.ConfiguredURL | default "/" }}
                   {{ if $isExternal }}
-                      {{ $url = $item.URL }}
+                      {{ $url = $item.ConfiguredURL }}
                   {{ else }}
-                      {{ $url = $item.URL | relLangURL }}
+                      {{ $url = $item.ConfiguredURL | relLangURL }}
                   {{ end }}
                 <a class="link-muted" href="{{ $url }}" target="{{ if $isExternal }}_blank{{ else }}_self{{ end }}">
                     {{ $item.Name }}

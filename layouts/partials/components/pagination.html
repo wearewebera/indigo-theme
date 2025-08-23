@@ -8,7 +8,7 @@
     <ul class="pagination justify-content-center flex-wrap my-4">
       <!-- Previous page. -->
         {{ if $paginator.HasPrev }}
-          <li class="page-item"><a class="page-link arrow" href="{{ $paginator.Prev.URL }}"
+          <li class="page-item"><a class="page-link arrow" href="{{ $paginator.Prev.Permalink }}"
                                    aria-label="Pagination Arrow">
             <i class="fas fa-angle-left"></i>
           </a></li>
@@ -43,14 +43,14 @@
             {{ end }}
             {{ if eq ($.Scratch.Get "page_number_flag") true }}
               <li class="page-item">
-                <a href="{{ .URL }}" class="page-link{{ if eq . $paginator }} active {{ end }}">
+                <a href="{{ .Permalink }}" class="page-link{{ if eq . $paginator }} active {{ end }}">
                     {{ .PageNumber }}
                 </a>
               </li>
             {{ end }}
         {{ end }}
         {{ if $paginator.HasNext }}
-          <li class="page-item"><a class="page-link arrow" href="{{ $paginator.Next.URL }}"
+          <li class="page-item"><a class="page-link arrow" href="{{ $paginator.Next.Permalink }}"
                                    aria-label="Pagination Arrow">
             <i class="fas fa-angle-right"></i>
           </a></li>
