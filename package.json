@@ -1,11 +1,46 @@
 {
   "name": "indigo-theme",
   "version": "1.0.0",
+  "description": "A modern, responsive Hugo theme for the Webera ecosystem",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wearewebera/indigo-theme"
+  },
   "scripts": {
-    "update-modules": "hugo mod clean --all && hugo mod get -u ./... && hugo mod tidy"
+    "update-modules": "hugo mod clean --all && hugo mod get -u ./... && hugo mod tidy",
+    "dev": "hugo server -s exampleSite --disableFastRender --bind 0.0.0.0",
+    "dev:docs": "hugo server -s docsSite --disableFastRender --bind 0.0.0.0",
+    "build": "hugo -s exampleSite --minify",
+    "build:docs": "hugo -s docsSite --minify",
+    "lint:scss": "stylelint 'assets/scss/**/*.scss' --fix",
+    "lint:js": "eslint assets/js/**/*.js --fix",
+    "format": "prettier --write '**/*.{html,scss,js,json,md,yaml,yml,toml}'",
+    "format:check": "prettier --check '**/*.{html,scss,js,json,md,yaml,yml,toml}'",
+    "test": "npm run lint:scss && npm run lint:js && npm run format:check",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "prettier": "^3.3.3",
-    "prettier-plugin-go-template": "^0.0.15"
+    "prettier-plugin-go-template": "^0.0.15",
+    "stylelint": "^16.0.0",
+    "stylelint-config-standard-scss": "^13.0.0",
+    "eslint": "^8.57.0",
+    "eslint-config-standard": "^17.1.0",
+    "husky": "^9.0.0",
+    "lint-staged": "^15.0.0"
+  },
+  "lint-staged": {
+    "*.{html,md,yaml,yml,toml,json}": "prettier --write",
+    "*.scss": [
+      "stylelint --fix",
+      "prettier --write"
+    ],
+    "*.js": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }

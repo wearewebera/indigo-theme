@@ -1,0 +1,26 @@
+// V2 Theme Main SCSS Entry Point
+// Import this file when theme version is set to "v2"
+
+// Abstracts
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+// Base styles
+@import "base/reset";
+@import "base/typography";
+
+// Layout components
+@import "layouts/header";
+@import "layouts/footer";
+@import "layouts/section";
+
+// Components
+@import "components/card";
+@import "components/button";
+@import "components/hero";
+@import "components/cta";
+@import "components/form";
+
+// Utilities
+@import "utilities/helpers";
+@import "utilities/spacing";
